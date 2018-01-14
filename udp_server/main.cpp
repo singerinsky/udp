@@ -38,8 +38,8 @@ bool create_server(){
                             event.peer -> address.host,
                             event.peer -> address.port);
                     /* Store any relevant client information here. */
-                     snprintf(name,10,"%d",111);
-                     event.peer -> data = (void*)name;//(void*)"Client information";
+                     //snprintf(name,10,"%d",111);
+                     //event.peer -> data = (void*)name;//(void*)"Client information";
                     break;
                 case ENET_EVENT_TYPE_RECEIVE:
                     printf ("A packet of length %u containing %s was received from %s on channel %u.\n",

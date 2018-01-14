@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/workspace/enet/udp_client
+CMAKE_SOURCE_DIR = /home/gl/enet/udp/udp_client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/workspace/enet/udp_client
+CMAKE_BINARY_DIR = /home/gl/enet/udp/udp_client
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/enet/udp_client/CMakeFiles /home/gl/workspace/enet/udp_client/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/enet/udp/udp_client/CMakeFiles /home/gl/enet/udp/udp_client/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/enet/udp_client/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/enet/udp/udp_client/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,102 +111,6 @@ udp_client/fast:
 	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/build
 .PHONY : udp_client/fast
 
-callbacks.o: callbacks.c.o
-.PHONY : callbacks.o
-
-# target to build an object file
-callbacks.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/callbacks.c.o
-.PHONY : callbacks.c.o
-
-callbacks.i: callbacks.c.i
-.PHONY : callbacks.i
-
-# target to preprocess a source file
-callbacks.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/callbacks.c.i
-.PHONY : callbacks.c.i
-
-callbacks.s: callbacks.c.s
-.PHONY : callbacks.s
-
-# target to generate assembly for a file
-callbacks.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/callbacks.c.s
-.PHONY : callbacks.c.s
-
-compress.o: compress.c.o
-.PHONY : compress.o
-
-# target to build an object file
-compress.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/compress.c.o
-.PHONY : compress.c.o
-
-compress.i: compress.c.i
-.PHONY : compress.i
-
-# target to preprocess a source file
-compress.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/compress.c.i
-.PHONY : compress.c.i
-
-compress.s: compress.c.s
-.PHONY : compress.s
-
-# target to generate assembly for a file
-compress.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/compress.c.s
-.PHONY : compress.c.s
-
-host.o: host.c.o
-.PHONY : host.o
-
-# target to build an object file
-host.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/host.c.o
-.PHONY : host.c.o
-
-host.i: host.c.i
-.PHONY : host.i
-
-# target to preprocess a source file
-host.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/host.c.i
-.PHONY : host.c.i
-
-host.s: host.c.s
-.PHONY : host.s
-
-# target to generate assembly for a file
-host.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/host.c.s
-.PHONY : host.c.s
-
-list.o: list.c.o
-.PHONY : list.o
-
-# target to build an object file
-list.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/list.c.o
-.PHONY : list.c.o
-
-list.i: list.c.i
-.PHONY : list.i
-
-# target to preprocess a source file
-list.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/list.c.i
-.PHONY : list.c.i
-
-list.s: list.c.s
-.PHONY : list.s
-
-# target to generate assembly for a file
-list.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/list.c.s
-.PHONY : list.c.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -231,126 +135,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-packet.o: packet.c.o
-.PHONY : packet.o
-
-# target to build an object file
-packet.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/packet.c.o
-.PHONY : packet.c.o
-
-packet.i: packet.c.i
-.PHONY : packet.i
-
-# target to preprocess a source file
-packet.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/packet.c.i
-.PHONY : packet.c.i
-
-packet.s: packet.c.s
-.PHONY : packet.s
-
-# target to generate assembly for a file
-packet.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/packet.c.s
-.PHONY : packet.c.s
-
-peer.o: peer.c.o
-.PHONY : peer.o
-
-# target to build an object file
-peer.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/peer.c.o
-.PHONY : peer.c.o
-
-peer.i: peer.c.i
-.PHONY : peer.i
-
-# target to preprocess a source file
-peer.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/peer.c.i
-.PHONY : peer.c.i
-
-peer.s: peer.c.s
-.PHONY : peer.s
-
-# target to generate assembly for a file
-peer.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/peer.c.s
-.PHONY : peer.c.s
-
-protocol.o: protocol.c.o
-.PHONY : protocol.o
-
-# target to build an object file
-protocol.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/protocol.c.o
-.PHONY : protocol.c.o
-
-protocol.i: protocol.c.i
-.PHONY : protocol.i
-
-# target to preprocess a source file
-protocol.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/protocol.c.i
-.PHONY : protocol.c.i
-
-protocol.s: protocol.c.s
-.PHONY : protocol.s
-
-# target to generate assembly for a file
-protocol.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/protocol.c.s
-.PHONY : protocol.c.s
-
-unix.o: unix.c.o
-.PHONY : unix.o
-
-# target to build an object file
-unix.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/unix.c.o
-.PHONY : unix.c.o
-
-unix.i: unix.c.i
-.PHONY : unix.i
-
-# target to preprocess a source file
-unix.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/unix.c.i
-.PHONY : unix.c.i
-
-unix.s: unix.c.s
-.PHONY : unix.s
-
-# target to generate assembly for a file
-unix.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/unix.c.s
-.PHONY : unix.c.s
-
-win32.o: win32.c.o
-.PHONY : win32.o
-
-# target to build an object file
-win32.c.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/win32.c.o
-.PHONY : win32.c.o
-
-win32.i: win32.c.i
-.PHONY : win32.i
-
-# target to preprocess a source file
-win32.c.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/win32.c.i
-.PHONY : win32.c.i
-
-win32.s: win32.c.s
-.PHONY : win32.s
-
-# target to generate assembly for a file
-win32.c.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/win32.c.s
-.PHONY : win32.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -360,36 +144,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... udp_client"
-	@echo "... callbacks.o"
-	@echo "... callbacks.i"
-	@echo "... callbacks.s"
-	@echo "... compress.o"
-	@echo "... compress.i"
-	@echo "... compress.s"
-	@echo "... host.o"
-	@echo "... host.i"
-	@echo "... host.s"
-	@echo "... list.o"
-	@echo "... list.i"
-	@echo "... list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... packet.o"
-	@echo "... packet.i"
-	@echo "... packet.s"
-	@echo "... peer.o"
-	@echo "... peer.i"
-	@echo "... peer.s"
-	@echo "... protocol.o"
-	@echo "... protocol.i"
-	@echo "... protocol.s"
-	@echo "... unix.o"
-	@echo "... unix.i"
-	@echo "... unix.s"
-	@echo "... win32.o"
-	@echo "... win32.i"
-	@echo "... win32.s"
 .PHONY : help
 
 

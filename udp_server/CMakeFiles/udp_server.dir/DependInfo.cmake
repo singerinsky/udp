@@ -5,19 +5,22 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/gl/workspace/enet/udp_server/callbacks.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/callbacks.c.o"
-  "/home/gl/workspace/enet/udp_server/compress.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/compress.c.o"
-  "/home/gl/workspace/enet/udp_server/host.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/host.c.o"
-  "/home/gl/workspace/enet/udp_server/list.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/list.c.o"
-  "/home/gl/workspace/enet/udp_server/packet.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/packet.c.o"
-  "/home/gl/workspace/enet/udp_server/peer.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/peer.c.o"
-  "/home/gl/workspace/enet/udp_server/protocol.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/protocol.c.o"
-  "/home/gl/workspace/enet/udp_server/unix.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/unix.c.o"
-  "/home/gl/workspace/enet/udp_server/win32.c" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/win32.c.o"
+  "/home/gl/enet/udp/udp_server/callbacks.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/callbacks.c.o"
+  "/home/gl/enet/udp/udp_server/compress.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/compress.c.o"
+  "/home/gl/enet/udp/udp_server/host.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/host.c.o"
+  "/home/gl/enet/udp/udp_server/list.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/list.c.o"
+  "/home/gl/enet/udp/udp_server/packet.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/packet.c.o"
+  "/home/gl/enet/udp/udp_server/peer.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/peer.c.o"
+  "/home/gl/enet/udp/udp_server/protocol.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/protocol.c.o"
+  "/home/gl/enet/udp/udp_server/unix.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/unix.c.o"
+  "/home/gl/enet/udp/udp_server/win32.c" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/win32.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gl/workspace/enet/udp_server/main.cpp" "/home/gl/workspace/enet/udp_server/CMakeFiles/udp_server.dir/main.cpp.o"
+  "/home/gl/enet/udp/udp_server/main.cpp" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/main.cpp.o"
+  "/home/gl/enet/udp/udp_server/thread.cpp" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/thread.cpp.o"
+  "/home/gl/enet/udp/udp_server/udpserver.cpp" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/udpserver.cpp.o"
+  "/home/gl/enet/udp/udp_server/udpserver_test.cpp" "/home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/udpserver_test.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

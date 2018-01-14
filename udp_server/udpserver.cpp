@@ -17,13 +17,13 @@ udp_server::~udp_server() {
 	enet_host_destroy(m_pServer);
 }
 
-bool udp_server::init(std::string str_ip,uint32_t u_port,uint32 u_max_online)
+bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 {
 	if (enet_initialize () != 0)
 	{
 		return false;
 	}
-	enet_address_set_host (&address, str_ip.c_str());
+	enet_address_set_host (&_address, str_ip.c_str());
 	/* Bind the server to port 1234. */
 	_address.port = u_port;
 	m_pServer = enet_host_create (& _address /* the address to bind the server host to */,
@@ -38,12 +38,12 @@ bool udp_server::init(std::string str_ip,uint32_t u_port,uint32 u_max_online)
 	return true;
 }
 
-void udp_server::loop(){
+bool udp_server::loop(){
 	  ENetEvent event;
 	    /* Wait up to 1000 milliseconds for an event. */
 	    while(m_bRun){
 	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	        while (enet_host_service (server, & event, 1) >= 0)
+	        while (enet_host_service (m_pServer, & event, 1) >= 0)
 	        {
 
 	            printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
@@ -73,6 +73,12 @@ void udp_server::loop(){
 	                    event.peer -> data = NULL;
 	                    break;
 	            }
+                //check event,valid event should push list
+                //TODO 
 	        }
 	    }
+}
+
+void udp_server::run(){
+    bool rst = loop();
 }

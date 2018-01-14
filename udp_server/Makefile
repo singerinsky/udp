@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/workspace/enet/udp_server
+CMAKE_SOURCE_DIR = /home/gl/enet/udp/udp_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/workspace/enet/udp_server
+CMAKE_BINARY_DIR = /home/gl/enet/udp/udp_server
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/enet/udp_server/CMakeFiles /home/gl/workspace/enet/udp_server/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/enet/udp/udp_server/CMakeFiles /home/gl/enet/udp/udp_server/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/workspace/enet/udp_server/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/enet/udp/udp_server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -303,6 +303,78 @@ protocol.c.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/protocol.c.s
 .PHONY : protocol.c.s
 
+thread.o: thread.cpp.o
+.PHONY : thread.o
+
+# target to build an object file
+thread.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.o
+.PHONY : thread.cpp.o
+
+thread.i: thread.cpp.i
+.PHONY : thread.i
+
+# target to preprocess a source file
+thread.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.i
+.PHONY : thread.cpp.i
+
+thread.s: thread.cpp.s
+.PHONY : thread.s
+
+# target to generate assembly for a file
+thread.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.s
+.PHONY : thread.cpp.s
+
+udpserver.o: udpserver.cpp.o
+.PHONY : udpserver.o
+
+# target to build an object file
+udpserver.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver.cpp.o
+.PHONY : udpserver.cpp.o
+
+udpserver.i: udpserver.cpp.i
+.PHONY : udpserver.i
+
+# target to preprocess a source file
+udpserver.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver.cpp.i
+.PHONY : udpserver.cpp.i
+
+udpserver.s: udpserver.cpp.s
+.PHONY : udpserver.s
+
+# target to generate assembly for a file
+udpserver.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver.cpp.s
+.PHONY : udpserver.cpp.s
+
+udpserver_test.o: udpserver_test.cpp.o
+.PHONY : udpserver_test.o
+
+# target to build an object file
+udpserver_test.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver_test.cpp.o
+.PHONY : udpserver_test.cpp.o
+
+udpserver_test.i: udpserver_test.cpp.i
+.PHONY : udpserver_test.i
+
+# target to preprocess a source file
+udpserver_test.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver_test.cpp.i
+.PHONY : udpserver_test.cpp.i
+
+udpserver_test.s: udpserver_test.cpp.s
+.PHONY : udpserver_test.s
+
+# target to generate assembly for a file
+udpserver_test.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver_test.cpp.s
+.PHONY : udpserver_test.cpp.s
+
 unix.o: unix.c.o
 .PHONY : unix.o
 
@@ -384,6 +456,15 @@ help:
 	@echo "... protocol.o"
 	@echo "... protocol.i"
 	@echo "... protocol.s"
+	@echo "... thread.o"
+	@echo "... thread.i"
+	@echo "... thread.s"
+	@echo "... udpserver.o"
+	@echo "... udpserver.i"
+	@echo "... udpserver.s"
+	@echo "... udpserver_test.o"
+	@echo "... udpserver_test.i"
+	@echo "... udpserver_test.s"
 	@echo "... unix.o"
 	@echo "... unix.i"
 	@echo "... unix.s"

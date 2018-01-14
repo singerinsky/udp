@@ -9,13 +9,15 @@
 #define UDPSERVER_H_
 
 #include "serverpch.h"
+#include "thread.h"
 
-class udp_server {
+class udp_server:public thread {
 public:
 	udp_server();
 	virtual ~udp_server();
-	bool init(std::string ,uint32_t );
+	bool init(std::string ,e_uint32,e_uint32);
 	bool loop();
+    void run();
 
 protected:
     ENetAddress _address;

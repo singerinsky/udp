@@ -1,1 +1,1 @@
-/home/gl/workspace/enet/udp_client/CMakeFiles/udp_client.dir
+/home/gl/enet/udp/udp_client/CMakeFiles/udp_client.dir
