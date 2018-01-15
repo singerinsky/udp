@@ -7,6 +7,8 @@
 
 #include "udpserver.h"
 
+INSTANCE_SINGLETON(udp_server);
+
 udp_server::udp_server() {
 	// TODO Auto-generated constructor stub
 	m_bRun = false;
@@ -39,38 +41,38 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 }
 
 bool udp_server::loop(){
-	  ENetEvent event;
+	  ENetEvent *event = new ENetEvent();
 	    /* Wait up to 1000 milliseconds for an event. */
 	    while(m_bRun){
 	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	        while (enet_host_service (m_pServer, & event, 1) >= 0)
+	        while (enet_host_service (m_pServer, event, 1) >= 0)
 	        {
 
 	            printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	            switch (event.type)
+	            switch (event->type)
 	            {
 	            	//build gameserver event,send to logic thread
 	                case ENET_EVENT_TYPE_CONNECT:
 	                    printf ("A new client connected from %x:%u.\n",
-	                            event.peer -> address.host,
-	                            event.peer -> address.port);
+	                            event->peer -> address.host,
+	                            event->peer -> address.port);
 	                    /* Store any relevant client information here. */
 	                    break;
 	                case ENET_EVENT_TYPE_RECEIVE:
 	                    printf ("A packet of length %u containing %s was received from %s on channel %u.\n",
-	                            event.packet -> dataLength,
-	                            event.packet -> data,
-	                            event.peer -> data,
-	                            event.channelID);
+	                            event->packet -> dataLength,
+	                            event->packet -> data,
+	                            event->peer -> data,
+	                            event->channelID);
 	                    /* Clean up the packet now that we're done using it. */
-	                    enet_packet_destroy (event.packet);
+	                    enet_packet_destroy (event->packet);
 
 	                    break;
 
 	                case ENET_EVENT_TYPE_DISCONNECT:
-	                    printf ("%s disconnected.\n", event.peer -> data);
+	                    printf ("%s disconnected.\n", event->peer -> data);
 	                    /* Reset the peer's client information. */
-	                    event.peer -> data = NULL;
+	                    event->peer -> data = NULL;
 	                    break;
 	            }
                 //check event,valid event should push list

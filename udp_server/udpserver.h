@@ -10,8 +10,11 @@
 
 #include "serverpch.h"
 #include "thread.h"
+#include "singleton.h"
+#include "queue.h"
 
 class udp_server:public thread {
+    DECLARE_SINGLETON(udp_server);
 public:
 	udp_server();
 	virtual ~udp_server();

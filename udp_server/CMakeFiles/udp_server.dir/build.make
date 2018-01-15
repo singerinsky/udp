@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/enet/udp/udp_server
+CMAKE_SOURCE_DIR = /home/gl/git/udp/udp_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/enet/udp/udp_server
+CMAKE_BINARY_DIR = /home/gl/git/udp/udp_server
 
 # Include any dependencies generated for this target.
 include CMakeFiles/udp_server.dir/depend.make
@@ -49,157 +49,19 @@ include CMakeFiles/udp_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/udp_server.dir/flags.make
 
-CMakeFiles/udp_server.dir/thread.cpp.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/thread.cpp.o -c /home/gl/enet/udp/udp_server/thread.cpp
-
-CMakeFiles/udp_server.dir/thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/enet/udp/udp_server/thread.cpp > CMakeFiles/udp_server.dir/thread.cpp.i
-
-CMakeFiles/udp_server.dir/thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/enet/udp/udp_server/thread.cpp -o CMakeFiles/udp_server.dir/thread.cpp.s
-
-CMakeFiles/udp_server.dir/thread.cpp.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/thread.cpp.o.requires
-
-CMakeFiles/udp_server.dir/thread.cpp.o.provides: CMakeFiles/udp_server.dir/thread.cpp.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/thread.cpp.o.provides
-
-CMakeFiles/udp_server.dir/thread.cpp.o.provides.build: CMakeFiles/udp_server.dir/thread.cpp.o
-
-CMakeFiles/udp_server.dir/packet.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/packet.c.o: packet.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/packet.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/packet.c.o   -c /home/gl/enet/udp/udp_server/packet.c
-
-CMakeFiles/udp_server.dir/packet.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/packet.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/packet.c > CMakeFiles/udp_server.dir/packet.c.i
-
-CMakeFiles/udp_server.dir/packet.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/packet.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/packet.c -o CMakeFiles/udp_server.dir/packet.c.s
-
-CMakeFiles/udp_server.dir/packet.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/packet.c.o.requires
-
-CMakeFiles/udp_server.dir/packet.c.o.provides: CMakeFiles/udp_server.dir/packet.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/packet.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/packet.c.o.provides
-
-CMakeFiles/udp_server.dir/packet.c.o.provides.build: CMakeFiles/udp_server.dir/packet.c.o
-
-CMakeFiles/udp_server.dir/callbacks.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/callbacks.c.o: callbacks.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/callbacks.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/callbacks.c.o   -c /home/gl/enet/udp/udp_server/callbacks.c
-
-CMakeFiles/udp_server.dir/callbacks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/callbacks.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/callbacks.c > CMakeFiles/udp_server.dir/callbacks.c.i
-
-CMakeFiles/udp_server.dir/callbacks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/callbacks.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/callbacks.c -o CMakeFiles/udp_server.dir/callbacks.c.s
-
-CMakeFiles/udp_server.dir/callbacks.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/callbacks.c.o.requires
-
-CMakeFiles/udp_server.dir/callbacks.c.o.provides: CMakeFiles/udp_server.dir/callbacks.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/callbacks.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/callbacks.c.o.provides
-
-CMakeFiles/udp_server.dir/callbacks.c.o.provides.build: CMakeFiles/udp_server.dir/callbacks.c.o
-
-CMakeFiles/udp_server.dir/peer.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/peer.c.o: peer.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/peer.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/peer.c.o   -c /home/gl/enet/udp/udp_server/peer.c
-
-CMakeFiles/udp_server.dir/peer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/peer.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/peer.c > CMakeFiles/udp_server.dir/peer.c.i
-
-CMakeFiles/udp_server.dir/peer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/peer.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/peer.c -o CMakeFiles/udp_server.dir/peer.c.s
-
-CMakeFiles/udp_server.dir/peer.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/peer.c.o.requires
-
-CMakeFiles/udp_server.dir/peer.c.o.provides: CMakeFiles/udp_server.dir/peer.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/peer.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/peer.c.o.provides
-
-CMakeFiles/udp_server.dir/peer.c.o.provides.build: CMakeFiles/udp_server.dir/peer.c.o
-
-CMakeFiles/udp_server.dir/udpserver.cpp.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/udpserver.cpp.o: udpserver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver.cpp.o -c /home/gl/enet/udp/udp_server/udpserver.cpp
-
-CMakeFiles/udp_server.dir/udpserver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/udpserver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/enet/udp/udp_server/udpserver.cpp > CMakeFiles/udp_server.dir/udpserver.cpp.i
-
-CMakeFiles/udp_server.dir/udpserver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/udpserver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/enet/udp/udp_server/udpserver.cpp -o CMakeFiles/udp_server.dir/udpserver.cpp.s
-
-CMakeFiles/udp_server.dir/udpserver.cpp.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
-
-CMakeFiles/udp_server.dir/udpserver.cpp.o.provides: CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver.cpp.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/udpserver.cpp.o.provides
-
-CMakeFiles/udp_server.dir/udpserver.cpp.o.provides.build: CMakeFiles/udp_server.dir/udpserver.cpp.o
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/udpserver_test.cpp.o: udpserver_test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver_test.cpp.o -c /home/gl/enet/udp/udp_server/udpserver_test.cpp
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/udpserver_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/enet/udp/udp_server/udpserver_test.cpp > CMakeFiles/udp_server.dir/udpserver_test.cpp.i
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/udpserver_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/enet/udp/udp_server/udpserver_test.cpp -o CMakeFiles/udp_server.dir/udpserver_test.cpp.s
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides: CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides
-
-CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides.build: CMakeFiles/udp_server.dir/udpserver_test.cpp.o
-
 CMakeFiles/udp_server.dir/host.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/host.c.o: host.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/host.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/host.c.o   -c /home/gl/enet/udp/udp_server/host.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/host.c.o   -c /home/gl/git/udp/udp_server/host.c
 
 CMakeFiles/udp_server.dir/host.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/host.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/host.c > CMakeFiles/udp_server.dir/host.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/host.c > CMakeFiles/udp_server.dir/host.c.i
 
 CMakeFiles/udp_server.dir/host.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/host.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/host.c -o CMakeFiles/udp_server.dir/host.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/host.c -o CMakeFiles/udp_server.dir/host.c.s
 
 CMakeFiles/udp_server.dir/host.c.o.requires:
 .PHONY : CMakeFiles/udp_server.dir/host.c.o.requires
@@ -210,111 +72,19 @@ CMakeFiles/udp_server.dir/host.c.o.provides: CMakeFiles/udp_server.dir/host.c.o.
 
 CMakeFiles/udp_server.dir/host.c.o.provides.build: CMakeFiles/udp_server.dir/host.c.o
 
-CMakeFiles/udp_server.dir/win32.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/win32.c.o: win32.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/win32.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/win32.c.o   -c /home/gl/enet/udp/udp_server/win32.c
-
-CMakeFiles/udp_server.dir/win32.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/win32.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/win32.c > CMakeFiles/udp_server.dir/win32.c.i
-
-CMakeFiles/udp_server.dir/win32.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/win32.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/win32.c -o CMakeFiles/udp_server.dir/win32.c.s
-
-CMakeFiles/udp_server.dir/win32.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/win32.c.o.requires
-
-CMakeFiles/udp_server.dir/win32.c.o.provides: CMakeFiles/udp_server.dir/win32.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/win32.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/win32.c.o.provides
-
-CMakeFiles/udp_server.dir/win32.c.o.provides.build: CMakeFiles/udp_server.dir/win32.c.o
-
-CMakeFiles/udp_server.dir/compress.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/compress.c.o: compress.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/compress.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/compress.c.o   -c /home/gl/enet/udp/udp_server/compress.c
-
-CMakeFiles/udp_server.dir/compress.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/compress.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/compress.c > CMakeFiles/udp_server.dir/compress.c.i
-
-CMakeFiles/udp_server.dir/compress.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/compress.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/compress.c -o CMakeFiles/udp_server.dir/compress.c.s
-
-CMakeFiles/udp_server.dir/compress.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/compress.c.o.requires
-
-CMakeFiles/udp_server.dir/compress.c.o.provides: CMakeFiles/udp_server.dir/compress.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/compress.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/compress.c.o.provides
-
-CMakeFiles/udp_server.dir/compress.c.o.provides.build: CMakeFiles/udp_server.dir/compress.c.o
-
-CMakeFiles/udp_server.dir/protocol.c.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/protocol.c.o: protocol.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/protocol.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/protocol.c.o   -c /home/gl/enet/udp/udp_server/protocol.c
-
-CMakeFiles/udp_server.dir/protocol.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/protocol.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/protocol.c > CMakeFiles/udp_server.dir/protocol.c.i
-
-CMakeFiles/udp_server.dir/protocol.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/protocol.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/protocol.c -o CMakeFiles/udp_server.dir/protocol.c.s
-
-CMakeFiles/udp_server.dir/protocol.c.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/protocol.c.o.requires
-
-CMakeFiles/udp_server.dir/protocol.c.o.provides: CMakeFiles/udp_server.dir/protocol.c.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/protocol.c.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/protocol.c.o.provides
-
-CMakeFiles/udp_server.dir/protocol.c.o.provides.build: CMakeFiles/udp_server.dir/protocol.c.o
-
-CMakeFiles/udp_server.dir/main.cpp.o: CMakeFiles/udp_server.dir/flags.make
-CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/main.cpp.o -c /home/gl/enet/udp/udp_server/main.cpp
-
-CMakeFiles/udp_server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/enet/udp/udp_server/main.cpp > CMakeFiles/udp_server.dir/main.cpp.i
-
-CMakeFiles/udp_server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/enet/udp/udp_server/main.cpp -o CMakeFiles/udp_server.dir/main.cpp.s
-
-CMakeFiles/udp_server.dir/main.cpp.o.requires:
-.PHONY : CMakeFiles/udp_server.dir/main.cpp.o.requires
-
-CMakeFiles/udp_server.dir/main.cpp.o.provides: CMakeFiles/udp_server.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/udp_server.dir/main.cpp.o.provides
-
-CMakeFiles/udp_server.dir/main.cpp.o.provides.build: CMakeFiles/udp_server.dir/main.cpp.o
-
 CMakeFiles/udp_server.dir/unix.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/unix.c.o: unix.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/unix.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/unix.c.o   -c /home/gl/enet/udp/udp_server/unix.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/unix.c.o   -c /home/gl/git/udp/udp_server/unix.c
 
 CMakeFiles/udp_server.dir/unix.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/unix.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/unix.c > CMakeFiles/udp_server.dir/unix.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/unix.c > CMakeFiles/udp_server.dir/unix.c.i
 
 CMakeFiles/udp_server.dir/unix.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/unix.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/unix.c -o CMakeFiles/udp_server.dir/unix.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/unix.c -o CMakeFiles/udp_server.dir/unix.c.s
 
 CMakeFiles/udp_server.dir/unix.c.o.requires:
 .PHONY : CMakeFiles/udp_server.dir/unix.c.o.requires
@@ -327,17 +97,17 @@ CMakeFiles/udp_server.dir/unix.c.o.provides.build: CMakeFiles/udp_server.dir/uni
 
 CMakeFiles/udp_server.dir/list.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/list.c.o: list.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/list.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/list.c.o   -c /home/gl/enet/udp/udp_server/list.c
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/list.c.o   -c /home/gl/git/udp/udp_server/list.c
 
 CMakeFiles/udp_server.dir/list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/list.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/enet/udp/udp_server/list.c > CMakeFiles/udp_server.dir/list.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/list.c > CMakeFiles/udp_server.dir/list.c.i
 
 CMakeFiles/udp_server.dir/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/list.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/enet/udp/udp_server/list.c -o CMakeFiles/udp_server.dir/list.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/list.c -o CMakeFiles/udp_server.dir/list.c.s
 
 CMakeFiles/udp_server.dir/list.c.o.requires:
 .PHONY : CMakeFiles/udp_server.dir/list.c.o.requires
@@ -348,38 +118,268 @@ CMakeFiles/udp_server.dir/list.c.o.provides: CMakeFiles/udp_server.dir/list.c.o.
 
 CMakeFiles/udp_server.dir/list.c.o.provides.build: CMakeFiles/udp_server.dir/list.c.o
 
+CMakeFiles/udp_server.dir/packet.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/packet.c.o: packet.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/packet.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/packet.c.o   -c /home/gl/git/udp/udp_server/packet.c
+
+CMakeFiles/udp_server.dir/packet.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/packet.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/packet.c > CMakeFiles/udp_server.dir/packet.c.i
+
+CMakeFiles/udp_server.dir/packet.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/packet.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/packet.c -o CMakeFiles/udp_server.dir/packet.c.s
+
+CMakeFiles/udp_server.dir/packet.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/packet.c.o.requires
+
+CMakeFiles/udp_server.dir/packet.c.o.provides: CMakeFiles/udp_server.dir/packet.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/packet.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/packet.c.o.provides
+
+CMakeFiles/udp_server.dir/packet.c.o.provides.build: CMakeFiles/udp_server.dir/packet.c.o
+
+CMakeFiles/udp_server.dir/win32.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/win32.c.o: win32.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/win32.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/win32.c.o   -c /home/gl/git/udp/udp_server/win32.c
+
+CMakeFiles/udp_server.dir/win32.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/win32.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/win32.c > CMakeFiles/udp_server.dir/win32.c.i
+
+CMakeFiles/udp_server.dir/win32.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/win32.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/win32.c -o CMakeFiles/udp_server.dir/win32.c.s
+
+CMakeFiles/udp_server.dir/win32.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/win32.c.o.requires
+
+CMakeFiles/udp_server.dir/win32.c.o.provides: CMakeFiles/udp_server.dir/win32.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/win32.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/win32.c.o.provides
+
+CMakeFiles/udp_server.dir/win32.c.o.provides.build: CMakeFiles/udp_server.dir/win32.c.o
+
+CMakeFiles/udp_server.dir/callbacks.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/callbacks.c.o: callbacks.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/callbacks.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/callbacks.c.o   -c /home/gl/git/udp/udp_server/callbacks.c
+
+CMakeFiles/udp_server.dir/callbacks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/callbacks.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/callbacks.c > CMakeFiles/udp_server.dir/callbacks.c.i
+
+CMakeFiles/udp_server.dir/callbacks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/callbacks.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/callbacks.c -o CMakeFiles/udp_server.dir/callbacks.c.s
+
+CMakeFiles/udp_server.dir/callbacks.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/callbacks.c.o.requires
+
+CMakeFiles/udp_server.dir/callbacks.c.o.provides: CMakeFiles/udp_server.dir/callbacks.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/callbacks.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/callbacks.c.o.provides
+
+CMakeFiles/udp_server.dir/callbacks.c.o.provides.build: CMakeFiles/udp_server.dir/callbacks.c.o
+
+CMakeFiles/udp_server.dir/peer.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/peer.c.o: peer.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/peer.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/peer.c.o   -c /home/gl/git/udp/udp_server/peer.c
+
+CMakeFiles/udp_server.dir/peer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/peer.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/peer.c > CMakeFiles/udp_server.dir/peer.c.i
+
+CMakeFiles/udp_server.dir/peer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/peer.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/peer.c -o CMakeFiles/udp_server.dir/peer.c.s
+
+CMakeFiles/udp_server.dir/peer.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/peer.c.o.requires
+
+CMakeFiles/udp_server.dir/peer.c.o.provides: CMakeFiles/udp_server.dir/peer.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/peer.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/peer.c.o.provides
+
+CMakeFiles/udp_server.dir/peer.c.o.provides.build: CMakeFiles/udp_server.dir/peer.c.o
+
+CMakeFiles/udp_server.dir/thread.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/thread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/thread.cpp.o -c /home/gl/git/udp/udp_server/thread.cpp
+
+CMakeFiles/udp_server.dir/thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/thread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/thread.cpp > CMakeFiles/udp_server.dir/thread.cpp.i
+
+CMakeFiles/udp_server.dir/thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/thread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/thread.cpp -o CMakeFiles/udp_server.dir/thread.cpp.s
+
+CMakeFiles/udp_server.dir/thread.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/thread.cpp.o.requires
+
+CMakeFiles/udp_server.dir/thread.cpp.o.provides: CMakeFiles/udp_server.dir/thread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/thread.cpp.o.provides
+
+CMakeFiles/udp_server.dir/thread.cpp.o.provides.build: CMakeFiles/udp_server.dir/thread.cpp.o
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: udpserver_test.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver_test.cpp.o -c /home/gl/git/udp/udp_server/udpserver_test.cpp
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/udpserver_test.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/udpserver_test.cpp > CMakeFiles/udp_server.dir/udpserver_test.cpp.i
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/udpserver_test.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/udpserver_test.cpp -o CMakeFiles/udp_server.dir/udpserver_test.cpp.s
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides: CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides
+
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides.build: CMakeFiles/udp_server.dir/udpserver_test.cpp.o
+
+CMakeFiles/udp_server.dir/udpserver.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/udpserver.cpp.o: udpserver.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver.cpp.o -c /home/gl/git/udp/udp_server/udpserver.cpp
+
+CMakeFiles/udp_server.dir/udpserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/udpserver.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/udpserver.cpp > CMakeFiles/udp_server.dir/udpserver.cpp.i
+
+CMakeFiles/udp_server.dir/udpserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/udpserver.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/udpserver.cpp -o CMakeFiles/udp_server.dir/udpserver.cpp.s
+
+CMakeFiles/udp_server.dir/udpserver.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
+
+CMakeFiles/udp_server.dir/udpserver.cpp.o.provides: CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/udpserver.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/udpserver.cpp.o.provides
+
+CMakeFiles/udp_server.dir/udpserver.cpp.o.provides.build: CMakeFiles/udp_server.dir/udpserver.cpp.o
+
+CMakeFiles/udp_server.dir/protocol.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/protocol.c.o: protocol.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/protocol.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/protocol.c.o   -c /home/gl/git/udp/udp_server/protocol.c
+
+CMakeFiles/udp_server.dir/protocol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/protocol.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/protocol.c > CMakeFiles/udp_server.dir/protocol.c.i
+
+CMakeFiles/udp_server.dir/protocol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/protocol.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/protocol.c -o CMakeFiles/udp_server.dir/protocol.c.s
+
+CMakeFiles/udp_server.dir/protocol.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/protocol.c.o.requires
+
+CMakeFiles/udp_server.dir/protocol.c.o.provides: CMakeFiles/udp_server.dir/protocol.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/protocol.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/protocol.c.o.provides
+
+CMakeFiles/udp_server.dir/protocol.c.o.provides.build: CMakeFiles/udp_server.dir/protocol.c.o
+
+CMakeFiles/udp_server.dir/compress.c.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/compress.c.o: compress.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/compress.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/compress.c.o   -c /home/gl/git/udp/udp_server/compress.c
+
+CMakeFiles/udp_server.dir/compress.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/udp_server.dir/compress.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/gl/git/udp/udp_server/compress.c > CMakeFiles/udp_server.dir/compress.c.i
+
+CMakeFiles/udp_server.dir/compress.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/udp_server.dir/compress.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/gl/git/udp/udp_server/compress.c -o CMakeFiles/udp_server.dir/compress.c.s
+
+CMakeFiles/udp_server.dir/compress.c.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/compress.c.o.requires
+
+CMakeFiles/udp_server.dir/compress.c.o.provides: CMakeFiles/udp_server.dir/compress.c.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/compress.c.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/compress.c.o.provides
+
+CMakeFiles/udp_server.dir/compress.c.o.provides.build: CMakeFiles/udp_server.dir/compress.c.o
+
+CMakeFiles/udp_server.dir/main.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/main.cpp.o -c /home/gl/git/udp/udp_server/main.cpp
+
+CMakeFiles/udp_server.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/main.cpp > CMakeFiles/udp_server.dir/main.cpp.i
+
+CMakeFiles/udp_server.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/main.cpp -o CMakeFiles/udp_server.dir/main.cpp.s
+
+CMakeFiles/udp_server.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/main.cpp.o.requires
+
+CMakeFiles/udp_server.dir/main.cpp.o.provides: CMakeFiles/udp_server.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/main.cpp.o.provides
+
+CMakeFiles/udp_server.dir/main.cpp.o.provides.build: CMakeFiles/udp_server.dir/main.cpp.o
+
 # Object files for target udp_server
 udp_server_OBJECTS = \
-"CMakeFiles/udp_server.dir/thread.cpp.o" \
+"CMakeFiles/udp_server.dir/host.c.o" \
+"CMakeFiles/udp_server.dir/unix.c.o" \
+"CMakeFiles/udp_server.dir/list.c.o" \
 "CMakeFiles/udp_server.dir/packet.c.o" \
+"CMakeFiles/udp_server.dir/win32.c.o" \
 "CMakeFiles/udp_server.dir/callbacks.c.o" \
 "CMakeFiles/udp_server.dir/peer.c.o" \
-"CMakeFiles/udp_server.dir/udpserver.cpp.o" \
+"CMakeFiles/udp_server.dir/thread.cpp.o" \
 "CMakeFiles/udp_server.dir/udpserver_test.cpp.o" \
-"CMakeFiles/udp_server.dir/host.c.o" \
-"CMakeFiles/udp_server.dir/win32.c.o" \
-"CMakeFiles/udp_server.dir/compress.c.o" \
+"CMakeFiles/udp_server.dir/udpserver.cpp.o" \
 "CMakeFiles/udp_server.dir/protocol.c.o" \
-"CMakeFiles/udp_server.dir/main.cpp.o" \
-"CMakeFiles/udp_server.dir/unix.c.o" \
-"CMakeFiles/udp_server.dir/list.c.o"
+"CMakeFiles/udp_server.dir/compress.c.o" \
+"CMakeFiles/udp_server.dir/main.cpp.o"
 
 # External object files for target udp_server
 udp_server_EXTERNAL_OBJECTS =
 
-udp_server: CMakeFiles/udp_server.dir/thread.cpp.o
-udp_server: CMakeFiles/udp_server.dir/packet.c.o
-udp_server: CMakeFiles/udp_server.dir/callbacks.c.o
-udp_server: CMakeFiles/udp_server.dir/peer.c.o
-udp_server: CMakeFiles/udp_server.dir/udpserver.cpp.o
-udp_server: CMakeFiles/udp_server.dir/udpserver_test.cpp.o
 udp_server: CMakeFiles/udp_server.dir/host.c.o
-udp_server: CMakeFiles/udp_server.dir/win32.c.o
-udp_server: CMakeFiles/udp_server.dir/compress.c.o
-udp_server: CMakeFiles/udp_server.dir/protocol.c.o
-udp_server: CMakeFiles/udp_server.dir/main.cpp.o
 udp_server: CMakeFiles/udp_server.dir/unix.c.o
 udp_server: CMakeFiles/udp_server.dir/list.c.o
+udp_server: CMakeFiles/udp_server.dir/packet.c.o
+udp_server: CMakeFiles/udp_server.dir/win32.c.o
+udp_server: CMakeFiles/udp_server.dir/callbacks.c.o
+udp_server: CMakeFiles/udp_server.dir/peer.c.o
+udp_server: CMakeFiles/udp_server.dir/thread.cpp.o
+udp_server: CMakeFiles/udp_server.dir/udpserver_test.cpp.o
+udp_server: CMakeFiles/udp_server.dir/udpserver.cpp.o
+udp_server: CMakeFiles/udp_server.dir/protocol.c.o
+udp_server: CMakeFiles/udp_server.dir/compress.c.o
+udp_server: CMakeFiles/udp_server.dir/main.cpp.o
 udp_server: CMakeFiles/udp_server.dir/build.make
 udp_server: CMakeFiles/udp_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable udp_server"
@@ -389,19 +389,19 @@ udp_server: CMakeFiles/udp_server.dir/link.txt
 CMakeFiles/udp_server.dir/build: udp_server
 .PHONY : CMakeFiles/udp_server.dir/build
 
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/thread.cpp.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/packet.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/callbacks.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/peer.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/host.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/win32.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/compress.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/protocol.c.o.requires
-CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/main.cpp.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/unix.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/list.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/packet.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/win32.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/callbacks.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/peer.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/thread.cpp.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/udpserver_test.cpp.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/udpserver.cpp.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/protocol.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/compress.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/main.cpp.o.requires
 .PHONY : CMakeFiles/udp_server.dir/requires
 
 CMakeFiles/udp_server.dir/clean:
@@ -409,6 +409,6 @@ CMakeFiles/udp_server.dir/clean:
 .PHONY : CMakeFiles/udp_server.dir/clean
 
 CMakeFiles/udp_server.dir/depend:
-	cd /home/gl/enet/udp/udp_server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/enet/udp/udp_server /home/gl/enet/udp/udp_server /home/gl/enet/udp/udp_server /home/gl/enet/udp/udp_server /home/gl/enet/udp/udp_server/CMakeFiles/udp_server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gl/git/udp/udp_server && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/git/udp/udp_server /home/gl/git/udp/udp_server /home/gl/git/udp/udp_server /home/gl/git/udp/udp_server /home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/udp_server.dir/depend
 

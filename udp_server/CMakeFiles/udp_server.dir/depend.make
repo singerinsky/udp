@@ -91,7 +91,13 @@ CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/main.cpp.o: lock.h
 CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
+CMakeFiles/udp_server.dir/main.cpp.o: queue.h
+CMakeFiles/udp_server.dir/main.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/main.cpp.o: singleton.h
+CMakeFiles/udp_server.dir/main.cpp.o: thread.h
+CMakeFiles/udp_server.dir/main.cpp.o: udpserver.h
 
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/callbacks.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/enet.h
@@ -111,7 +117,10 @@ CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: lock.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: queue.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: thread.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: udpserver.cpp
 CMakeFiles/udp_server.dir/udpserver.cpp.o: udpserver.h
@@ -123,7 +132,10 @@ CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: lock.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: queue.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: thread.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: udpserver.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: udpserver_test.cpp

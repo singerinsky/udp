@@ -9,7 +9,7 @@ CMakeFiles/udp_server.dir/callbacks.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/callbacks.c
+ /home/gl/git/udp/udp_server/callbacks.c
 CMakeFiles/udp_server.dir/compress.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -18,7 +18,7 @@ CMakeFiles/udp_server.dir/compress.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/compress.c
+ /home/gl/git/udp/udp_server/compress.c
 CMakeFiles/udp_server.dir/host.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -27,7 +27,7 @@ CMakeFiles/udp_server.dir/host.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/host.c
+ /home/gl/git/udp/udp_server/host.c
 CMakeFiles/udp_server.dir/list.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -36,7 +36,7 @@ CMakeFiles/udp_server.dir/list.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/list.c
+ /home/gl/git/udp/udp_server/list.c
 CMakeFiles/udp_server.dir/packet.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -45,7 +45,7 @@ CMakeFiles/udp_server.dir/packet.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/packet.c
+ /home/gl/git/udp/udp_server/packet.c
 CMakeFiles/udp_server.dir/peer.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -54,7 +54,7 @@ CMakeFiles/udp_server.dir/peer.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/peer.c
+ /home/gl/git/udp/udp_server/peer.c
 CMakeFiles/udp_server.dir/protocol.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -65,7 +65,7 @@ CMakeFiles/udp_server.dir/protocol.c.o
  ./include/enet/unix.h
  ./include/enet/utility.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/protocol.c
+ /home/gl/git/udp/udp_server/protocol.c
 CMakeFiles/udp_server.dir/unix.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -74,7 +74,7 @@ CMakeFiles/udp_server.dir/unix.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/unix.c
+ /home/gl/git/udp/udp_server/unix.c
 CMakeFiles/udp_server.dir/win32.c.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -83,7 +83,7 @@ CMakeFiles/udp_server.dir/win32.c.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/win32.c
+ /home/gl/git/udp/udp_server/win32.c
 CMakeFiles/udp_server.dir/main.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -92,7 +92,13 @@ CMakeFiles/udp_server.dir/main.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/main.cpp
+ /home/gl/git/udp/udp_server/lock.h
+ /home/gl/git/udp/udp_server/main.cpp
+ /home/gl/git/udp/udp_server/queue.h
+ /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/singleton.h
+ /home/gl/git/udp/udp_server/thread.h
+ /home/gl/git/udp/udp_server/udpserver.h
 CMakeFiles/udp_server.dir/thread.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -101,9 +107,9 @@ CMakeFiles/udp_server.dir/thread.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/serverpch.h
- /home/gl/enet/udp/udp_server/thread.cpp
- /home/gl/enet/udp/udp_server/thread.h
+ /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/thread.cpp
+ /home/gl/git/udp/udp_server/thread.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -112,10 +118,13 @@ CMakeFiles/udp_server.dir/udpserver.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/serverpch.h
- /home/gl/enet/udp/udp_server/thread.h
- /home/gl/enet/udp/udp_server/udpserver.cpp
- /home/gl/enet/udp/udp_server/udpserver.h
+ /home/gl/git/udp/udp_server/lock.h
+ /home/gl/git/udp/udp_server/queue.h
+ /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/singleton.h
+ /home/gl/git/udp/udp_server/thread.h
+ /home/gl/git/udp/udp_server/udpserver.cpp
+ /home/gl/git/udp/udp_server/udpserver.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -124,7 +133,10 @@ CMakeFiles/udp_server.dir/udpserver_test.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
- /home/gl/enet/udp/udp_server/serverpch.h
- /home/gl/enet/udp/udp_server/thread.h
- /home/gl/enet/udp/udp_server/udpserver.h
- /home/gl/enet/udp/udp_server/udpserver_test.cpp
+ /home/gl/git/udp/udp_server/lock.h
+ /home/gl/git/udp/udp_server/queue.h
+ /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/singleton.h
+ /home/gl/git/udp/udp_server/thread.h
+ /home/gl/git/udp/udp_server/udpserver.h
+ /home/gl/git/udp/udp_server/udpserver_test.cpp

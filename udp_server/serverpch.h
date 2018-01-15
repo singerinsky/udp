@@ -20,6 +20,7 @@
 #include <time.h>
 #include <string>
 #include <enet/enet.h>
+#include <assert.h>
 
 typedef unsigned int e_uint32;
 typedef int e_int32;
