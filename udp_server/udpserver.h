@@ -14,7 +14,7 @@
 #include "queue.h"
 
 class udp_server:public thread {
-    DECLARE_SINGLETON(udp_server);
+//    DECLARE_SINGLETON(udp_server);
 public:
 	udp_server();
 	virtual ~udp_server();

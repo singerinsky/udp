@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <enet/enet.h>
 #include "udpserver.h"
+#include "netrequestmgr.h"
 
 bool create_server(){
 
@@ -66,14 +67,16 @@ bool create_server(){
 }
 
 int main(){
-    if(udp_server::CreateInstance() == false){
-        printf("error of create Instance!\n");
-    }
-    udp_server* pServer = udp_server::Instance();
-    pServer->init("0.0.0.0",9090,1000);
+    //if(udp_server::CreateInstance() == false){
+     //   printf("error of create Instance!\n");
+    //}
+    net_request_mgr::CreateInstance();
+    udp_server* pServer = new udp_server();//udp_server::Instance();
+    pServer->init("0.0.0.0",1234,1000);
     pServer->create();
     while(true){
-        usleep(1000); 
+        usleep(10); 
+
     }
     /*
     if (enet_initialize () != 0)

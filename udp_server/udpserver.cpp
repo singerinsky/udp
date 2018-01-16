@@ -6,8 +6,7 @@
  */
 
 #include "udpserver.h"
-
-INSTANCE_SINGLETON(udp_server);
+#include "netrequestmgr.h"
 
 udp_server::udp_server() {
 	// TODO Auto-generated constructor stub
@@ -44,8 +43,8 @@ bool udp_server::loop(){
 	  ENetEvent *event = new ENetEvent();
 	    /* Wait up to 1000 milliseconds for an event. */
 	    while(m_bRun){
-	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	        while (enet_host_service (m_pServer, event, 1) >= 0)
+	        printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
+	        while (enet_host_service (m_pServer, event, 1) > 0)
 	        {
 
 	            printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
@@ -53,12 +52,18 @@ bool udp_server::loop(){
 	            {
 	            	//build gameserver event,send to logic thread
 	                case ENET_EVENT_TYPE_CONNECT:
-	                    printf ("A new client connected from %x:%u.\n",
-	                            event->peer -> address.host,
+                        char ip_str[24];
+                        enet_address_get_host_ip(&(event->peer->address),ip_str,24);
+                        net_request_mgr::Instance()->push_conn_event(event->peer->connectID,
+                                event->peer->address.host,
+                                event->peer->address.port);
+	                    printf ("A new client connected from %s:%u.\n",
+                                ip_str,
 	                            event->peer -> address.port);
 	                    /* Store any relevant client information here. */
 	                    break;
 	                case ENET_EVENT_TYPE_RECEIVE:
+                        //net_request_mgr::Instance()->push_recv_event();
 	                    printf ("A packet of length %u containing %s was received from %s on channel %u.\n",
 	                            event->packet -> dataLength,
 	                            event->packet -> data,
@@ -70,6 +75,7 @@ bool udp_server::loop(){
 	                    break;
 
 	                case ENET_EVENT_TYPE_DISCONNECT:
+                        //net_request_mgr::Instance()->push_disconn_event();
 	                    printf ("%s disconnected.\n", event->peer -> data);
 	                    /* Reset the peer's client information. */
 	                    event->peer -> data = NULL;
@@ -79,8 +85,10 @@ bool udp_server::loop(){
                 //TODO 
 	        }
 	    }
+        return true;
 }
 
 void udp_server::run(){
-    bool rst = loop();
+    m_bRun = true;
+    loop();
 }

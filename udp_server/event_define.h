@@ -40,10 +40,10 @@ struct stEvent{
     EventType nType;
     union
     {
-        stConnFailEvt;
-        stConnectEvt;
-        stRecvEvt;
-        stDisconnEvt;
+        stConnFailEvt failEvt;
+        stConnectEvt connEvt;
+        stRecvEvt recvEvt;
+        stDisconnEvt disEvt;
     }stUn;
 };
 

@@ -231,6 +231,30 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+netrequestmgr.o: netrequestmgr.cpp.o
+.PHONY : netrequestmgr.o
+
+# target to build an object file
+netrequestmgr.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/netrequestmgr.cpp.o
+.PHONY : netrequestmgr.cpp.o
+
+netrequestmgr.i: netrequestmgr.cpp.i
+.PHONY : netrequestmgr.i
+
+# target to preprocess a source file
+netrequestmgr.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/netrequestmgr.cpp.i
+.PHONY : netrequestmgr.cpp.i
+
+netrequestmgr.s: netrequestmgr.cpp.s
+.PHONY : netrequestmgr.s
+
+# target to generate assembly for a file
+netrequestmgr.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/netrequestmgr.cpp.s
+.PHONY : netrequestmgr.cpp.s
+
 packet.o: packet.c.o
 .PHONY : packet.o
 
@@ -447,6 +471,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... netrequestmgr.o"
+	@echo "... netrequestmgr.i"
+	@echo "... netrequestmgr.s"
 	@echo "... packet.o"
 	@echo "... packet.i"
 	@echo "... packet.s"
