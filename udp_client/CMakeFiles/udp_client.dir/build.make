@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gl/enet/udp/udp_client
+CMAKE_SOURCE_DIR = /home/gl/git/udp/udp_client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gl/enet/udp/udp_client
+CMAKE_BINARY_DIR = /home/gl/git/udp/udp_client
 
 # Include any dependencies generated for this target.
 include CMakeFiles/udp_client.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/udp_client.dir/flags.make
 
 CMakeFiles/udp_client.dir/main.cpp.o: CMakeFiles/udp_client.dir/flags.make
 CMakeFiles/udp_client.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/enet/udp/udp_client/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_client/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_client.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_client.dir/main.cpp.o -c /home/gl/enet/udp/udp_client/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_client.dir/main.cpp.o -c /home/gl/git/udp/udp_client/main.cpp
 
 CMakeFiles/udp_client.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_client.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/enet/udp/udp_client/main.cpp > CMakeFiles/udp_client.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_client/main.cpp > CMakeFiles/udp_client.dir/main.cpp.i
 
 CMakeFiles/udp_client.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_client.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/enet/udp/udp_client/main.cpp -o CMakeFiles/udp_client.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_client/main.cpp -o CMakeFiles/udp_client.dir/main.cpp.s
 
 CMakeFiles/udp_client.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/udp_client.dir/main.cpp.o.requires
@@ -97,6 +97,6 @@ CMakeFiles/udp_client.dir/clean:
 .PHONY : CMakeFiles/udp_client.dir/clean
 
 CMakeFiles/udp_client.dir/depend:
-	cd /home/gl/enet/udp/udp_client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/enet/udp/udp_client /home/gl/enet/udp/udp_client /home/gl/enet/udp/udp_client /home/gl/enet/udp/udp_client /home/gl/enet/udp/udp_client/CMakeFiles/udp_client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gl/git/udp/udp_client && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gl/git/udp/udp_client /home/gl/git/udp/udp_client /home/gl/git/udp/udp_client /home/gl/git/udp/udp_client /home/gl/git/udp/udp_client/CMakeFiles/udp_client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/udp_client.dir/depend
 

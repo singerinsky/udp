@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gl/enet/udp/udp_client/main.cpp" "/home/gl/enet/udp/udp_client/CMakeFiles/udp_client.dir/main.cpp.o"
+  "/home/gl/git/udp/udp_client/main.cpp" "/home/gl/git/udp/udp_client/CMakeFiles/udp_client.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
