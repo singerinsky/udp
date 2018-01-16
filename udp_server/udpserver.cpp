@@ -20,11 +20,7 @@ udp_server::~udp_server() {
 
 bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 {
-	if (enet_initialize () != 0)
-	{
-		return false;
-	}
-	enet_address_set_host (&_address, str_ip.c_str());
+    enet_address_set_host (&_address, str_ip.c_str());
 	/* Bind the server to port 1234. */
 	_address.port = u_port;
 	m_pServer = enet_host_create (& _address /* the address to bind the server host to */,
@@ -34,8 +30,10 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 			0      /* assume any amount of outgoing bandwidth */);
 	if (m_pServer == NULL)
 	{
+        printf("start udpserver failed!\n");
 		return false;
 	}
+    printf("start udpserver successed!\n");
 	return true;
 }
 
@@ -43,11 +41,10 @@ bool udp_server::loop(){
 	  ENetEvent *event = new ENetEvent();
 	    /* Wait up to 1000 milliseconds for an event. */
 	    while(m_bRun){
-	        printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	        while (enet_host_service (m_pServer, event, 1) > 0)
+	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
+	        while (enet_host_service (m_pServer, event, 10) > 0)
 	        {
-
-	            printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
+	            //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
 	            switch (event->type)
 	            {
 	            	//build gameserver event,send to logic thread
@@ -60,18 +57,13 @@ bool udp_server::loop(){
 	                    printf ("A new client connected from %s:%u.\n",
                                 ip_str,
 	                            event->peer -> address.port);
-	                    /* Store any relevant client information here. */
 	                    break;
 	                case ENET_EVENT_TYPE_RECEIVE:
-                        //net_request_mgr::Instance()->push_recv_event();
-	                    printf ("A packet of length %u containing %s was received from %s on channel %u.\n",
-	                            event->packet -> dataLength,
-	                            event->packet -> data,
-	                            event->peer -> data,
-	                            event->channelID);
-	                    /* Clean up the packet now that we're done using it. */
+                        net_request_mgr::Instance()->push_recv_event(event->peer->connectID,
+                                (char*)event->packet->data,
+                                event->packet->dataLength
+                                );
 	                    enet_packet_destroy (event->packet);
-
 	                    break;
 
 	                case ENET_EVENT_TYPE_DISCONNECT:
