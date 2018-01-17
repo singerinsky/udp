@@ -99,6 +99,8 @@ CMakeFiles/udp_server.dir/main.cpp.o: queue.h
 CMakeFiles/udp_server.dir/main.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/main.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/main.cpp.o: thread.h
+CMakeFiles/udp_server.dir/main.cpp.o: time_util.h
+CMakeFiles/udp_server.dir/main.cpp.o: timer_manager.h
 CMakeFiles/udp_server.dir/main.cpp.o: udpserver.h
 
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/callbacks.h
@@ -126,6 +128,10 @@ CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/win32.h
 CMakeFiles/udp_server.dir/thread.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.h
+
+CMakeFiles/udp_server.dir/timer_manager.cpp.o: time_util.h
+CMakeFiles/udp_server.dir/timer_manager.cpp.o: timer_manager.cpp
+CMakeFiles/udp_server.dir/timer_manager.cpp.o: timer_manager.h
 
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/callbacks.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/enet.h

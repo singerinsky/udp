@@ -351,6 +351,30 @@ thread.cpp.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/thread.cpp.s
 .PHONY : thread.cpp.s
 
+timer_manager.o: timer_manager.cpp.o
+.PHONY : timer_manager.o
+
+# target to build an object file
+timer_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/timer_manager.cpp.o
+.PHONY : timer_manager.cpp.o
+
+timer_manager.i: timer_manager.cpp.i
+.PHONY : timer_manager.i
+
+# target to preprocess a source file
+timer_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/timer_manager.cpp.i
+.PHONY : timer_manager.cpp.i
+
+timer_manager.s: timer_manager.cpp.s
+.PHONY : timer_manager.s
+
+# target to generate assembly for a file
+timer_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/timer_manager.cpp.s
+.PHONY : timer_manager.cpp.s
+
 udpserver.o: udpserver.cpp.o
 .PHONY : udpserver.o
 
@@ -486,6 +510,9 @@ help:
 	@echo "... thread.o"
 	@echo "... thread.i"
 	@echo "... thread.s"
+	@echo "... timer_manager.o"
+	@echo "... timer_manager.i"
+	@echo "... timer_manager.s"
 	@echo "... udpserver.o"
 	@echo "... udpserver.i"
 	@echo "... udpserver.s"

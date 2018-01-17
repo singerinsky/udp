@@ -3,6 +3,7 @@
 #include <enet/enet.h>
 #include "udpserver.h"
 #include "netrequestmgr.h"
+#include "timer_manager.h"
 
 void process_event()
 {
@@ -39,13 +40,17 @@ int main(){
         printf ("An error occurred while initializing ENet.\n");
         return -1;
     }
+    
 
+    timer_manager timermgr;
+    timermgr.init(14);
     net_request_mgr::CreateInstance();
     udp_server* pServer = new udp_server();//udp_server::Instance();
     pServer->init("0.0.0.0",1234,1000);
     pServer->create();
     while(true){
         //netrequestmgr::Instance()->pop_event();
+        timermgr.run_until_now();
         process_event();
         usleep(10); 
     }

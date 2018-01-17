@@ -11,6 +11,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/udp_server.dir/udpserver.cpp.o"
   "CMakeFiles/udp_server.dir/netrequestmgr.cpp.o"
   "CMakeFiles/udp_server.dir/protocol.c.o"
+  "CMakeFiles/udp_server.dir/timer_manager.cpp.o"
   "CMakeFiles/udp_server.dir/compress.c.o"
   "CMakeFiles/udp_server.dir/main.cpp.o"
   "udp_server.pdb"

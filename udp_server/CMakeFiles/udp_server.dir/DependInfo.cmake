@@ -20,6 +20,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/gl/git/udp/udp_server/main.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/main.cpp.o"
   "/home/gl/git/udp/udp_server/netrequestmgr.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/netrequestmgr.cpp.o"
   "/home/gl/git/udp/udp_server/thread.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/thread.cpp.o"
+  "/home/gl/git/udp/udp_server/timer_manager.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/timer_manager.cpp.o"
   "/home/gl/git/udp/udp_server/udpserver.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/udpserver.cpp.o"
   "/home/gl/git/udp/udp_server/udpserver_test.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/udpserver_test.cpp.o"
   )
