@@ -10,6 +10,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "time_util.h"
+#include "singleton.h"
 
 
 
@@ -80,9 +81,7 @@ private:
 
 class timer_manager
 {
-public:
-
-
+    DECLARE_SINGLETON(timer_manager);    
 public:
     timer_manager() ;
     ~timer_manager();

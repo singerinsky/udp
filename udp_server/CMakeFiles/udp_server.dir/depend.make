@@ -91,6 +91,7 @@ CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/main.cpp.o: character_mgr.h
 CMakeFiles/udp_server.dir/main.cpp.o: event_define.h
 CMakeFiles/udp_server.dir/main.cpp.o: lock.h
 CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
@@ -129,6 +130,7 @@ CMakeFiles/udp_server.dir/thread.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.h
 
+CMakeFiles/udp_server.dir/timer_manager.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/timer_manager.cpp.o: time_util.h
 CMakeFiles/udp_server.dir/timer_manager.cpp.o: timer_manager.cpp
 CMakeFiles/udp_server.dir/timer_manager.cpp.o: timer_manager.h

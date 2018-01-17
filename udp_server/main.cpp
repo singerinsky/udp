@@ -4,6 +4,7 @@
 #include "udpserver.h"
 #include "netrequestmgr.h"
 #include "timer_manager.h"
+#include "character_mgr.h"
 
 void process_event()
 {
@@ -22,6 +23,7 @@ void process_event()
             printf("data len %d =>%s\n",
                     pevent->stUn.recvEvt.dwLen,
                     pevent->stUn.recvEvt.pData);
+            //decode message
             if(pevent->stUn.recvEvt.pData != NULL){
                 delete pevent->stUn.recvEvt.pData; 
             }
@@ -40,17 +42,17 @@ int main(){
         printf ("An error occurred while initializing ENet.\n");
         return -1;
     }
-    
 
-    timer_manager timermgr;
-    timermgr.init(14);
+    timer_manager::CreateInstance();
+    timer_manager::Instance()->init(14);
     net_request_mgr::CreateInstance();
     udp_server* pServer = new udp_server();//udp_server::Instance();
     pServer->init("0.0.0.0",1234,1000);
     pServer->create();
+    CCharacterMgr mgr;
     while(true){
         //netrequestmgr::Instance()->pop_event();
-        timermgr.run_until_now();
+        timer_manager::Instance()->run_until_now();
         process_event();
         usleep(10); 
     }

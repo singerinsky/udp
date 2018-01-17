@@ -25,6 +25,9 @@ void base_timer::base_timer_remove(base_timer* timer)
     timer->m_next = timer->m_prev = NULL ;
 }
 
+
+INSTANCE_SINGLETON(timer_manager);
+
 timer_manager::timer_manager():m_low_array(NULL),m_high_array(NULL)
 {
 
