@@ -12,15 +12,20 @@
 #include "thread.h"
 #include "singleton.h"
 #include "queue.h"
+#include <enet/enet.h>
 
 class udp_server:public thread {
-//    DECLARE_SINGLETON(udp_server);
+    DECLARE_SINGLETON(udp_server);
 public:
 	udp_server();
 	virtual ~udp_server();
 	bool init(std::string ,e_uint32,e_uint32);
 	bool loop();
     void run();
+    ENetPeer* get_peer(e_uint32 uConnID){
+        ENetPeer* peer = enet_host_get_peer(m_pServer,uConnID);
+        return peer;
+    };
 
 protected:
     ENetAddress _address;

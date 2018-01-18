@@ -8,6 +8,8 @@
 #include "udpserver.h"
 #include "netrequestmgr.h"
 
+INSTANCE_SINGLETON(udp_server);
+
 udp_server::udp_server() {
 	// TODO Auto-generated constructor stub
 	m_bRun = false;
@@ -38,16 +40,18 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 }
 
 bool udp_server::loop(){
-	  ENetEvent *event = new ENetEvent();
 	    /* Wait up to 1000 milliseconds for an event. */
+        ENetEvent *event = new ENetEvent();
 	    while(m_bRun){
+            net_request_mgr::Instance()->process_out_event(1);
 	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
-	        while (enet_host_service (m_pServer, event, 10) > 0)
+            uint32_t loopCount = 0;
+	        while ((loopCount++ < 300)
+                    &&(enet_host_service (m_pServer, event, 10) > 0))
 	        {
 	            //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
 	            switch (event->type)
 	            {
-	            	//build gameserver event,send to logic thread
 	                case ENET_EVENT_TYPE_CONNECT:
                         char ip_str[24];
                         enet_address_get_host_ip(&(event->peer->address),ip_str,24);
@@ -67,16 +71,21 @@ bool udp_server::loop(){
 	                    break;
 
 	                case ENET_EVENT_TYPE_DISCONNECT:
-                        //net_request_mgr::Instance()->push_disconn_event();
+                        net_request_mgr::Instance()->push_disconn_event(event->peer->connectID,
+                                event->peer->address.host,
+                                event->peer->address.port);
 	                    printf ("%s disconnected.\n", event->peer -> data);
 	                    /* Reset the peer's client information. */
 	                    event->peer -> data = NULL;
 	                    break;
+                    defalut:
+                        break;
 	            }
                 //check event,valid event should push list
                 //TODO 
 	        }
 	    }
+        delete event;
         return true;
 }
 

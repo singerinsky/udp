@@ -8,14 +8,18 @@
 
 void process_event()
 {
-   stEvent* pevent =  net_request_mgr::Instance()->pop_event();
+   stInEvent* pevent =  net_request_mgr::Instance()->pop_in_event();
    if(pevent == NULL){
         return; 
    }
    switch(pevent->nType)
    {
         case eConnect:
-            printf("accept new connection!\n");
+            {
+                ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
+                printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
+                net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
+            }
             break;
         case eConnectFail:
             break;
@@ -46,7 +50,8 @@ int main(){
     timer_manager::CreateInstance();
     timer_manager::Instance()->init(14);
     net_request_mgr::CreateInstance();
-    udp_server* pServer = new udp_server();//udp_server::Instance();
+    udp_server::CreateInstance();
+    udp_server* pServer = udp_server::Instance();//udp_server::Instance();
     pServer->init("0.0.0.0",1234,1000);
     pServer->create();
     CCharacterMgr mgr;

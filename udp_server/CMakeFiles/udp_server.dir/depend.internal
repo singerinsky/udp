@@ -119,6 +119,8 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o
  /home/gl/git/udp/udp_server/queue.h
  /home/gl/git/udp/udp_server/serverpch.h
  /home/gl/git/udp/udp_server/singleton.h
+ /home/gl/git/udp/udp_server/thread.h
+ /home/gl/git/udp/udp_server/udpserver.h
 CMakeFiles/udp_server.dir/thread.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h

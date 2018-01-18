@@ -17,7 +17,6 @@ class CCharacterMgr
        }
 
         void _on_timeout(timer_manager* mgr){
-            printf("%lldtimer out!!!!\n",time_us());
             _timer.set_expired(timer_manager::Instance()->get_run_ms()+1000);
             timer_manager::Instance()->add_timer(&_timer);
         }

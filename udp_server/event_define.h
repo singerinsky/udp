@@ -1,12 +1,19 @@
 #ifndef _EVENT_DEFINE_H_
 #define _EVENT_DEFINE_H_
 
-enum EventType{
+enum eInEventType{
     eNone = 0,
     eConnect,
     eConnectFail,
     eRecv,
     eDisConnect
+};
+
+enum eOutEventType
+{
+    eOutNone = 0,
+    eOutDisconnect,
+    eOutSend,
 };
 
 struct stConnectEvt{
@@ -36,8 +43,8 @@ struct stDisconnEvt
     e_uint32 dwError;
 };
 
-struct stEvent{
-    EventType nType;
+struct stInEvent{
+    eInEventType nType;
     union
     {
         stConnFailEvt failEvt;
@@ -47,5 +54,26 @@ struct stEvent{
     }stUn;
 };
 
+struct stDisconnOutEvt
+{
+    e_uint32 dwConnID;
+};
+
+struct stSendOutEvt
+{
+    e_uint32 dwConnID;
+    e_uint32 sendLen;
+    char*    pData;
+};
+
+struct stOutEvent
+{
+    eOutEventType nType;
+    union
+    {
+        stDisconnOutEvt disOutEvt;
+        stSendOutEvt    sendOutEvt;
+    }stUn;
+};
 
 #endif

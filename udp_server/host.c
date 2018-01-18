@@ -487,5 +487,15 @@ enet_host_bandwidth_throttle (ENetHost * host)
         peer -> outgoingDataTotal = 0;
     }
 }
+
+ENetPeer* enet_host_get_peer(ENetHost* host,enet_uint32 uConnID){
+    enet_uint32 i = 0;
+    for(;i < host->peerCount ; i++){
+        if(host->peers[i].connectID == uConnID){
+            return &(host->peers[i]); 
+        } 
+    }
+    return NULL;
+}
     
 /** @} */

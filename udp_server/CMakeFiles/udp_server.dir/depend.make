@@ -118,6 +118,8 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: netrequestmgr.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: queue.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: singleton.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: thread.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: udpserver.h
 
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/callbacks.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/enet.h
