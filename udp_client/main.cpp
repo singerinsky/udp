@@ -39,8 +39,8 @@ bool create_client(){
 
         enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
         while(true){
-            ENetPacket *packet1=enet_packet_create(NULL,86,ENET_PACKET_FLAG_RELIABLE); //创建包
-            strcpy((char*)packet1->data,"你好啊，呵呵");
+            ENetPacket *packet1=enet_packet_create(NULL,13,ENET_PACKET_FLAG_RELIABLE); //创建包
+            memcpy((char*)packet1->data,"Hello,World!",13);
             enet_peer_send(peer,0,packet1);
             enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
             sleep(1);
