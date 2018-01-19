@@ -14,6 +14,7 @@ enum eOutEventType
     eOutNone = 0,
     eOutDisconnect,
     eOutSend,
+    eOutStopRecv,
 };
 
 struct stConnectEvt{
@@ -65,6 +66,12 @@ struct stSendOutEvt
     e_uint32 sendLen;
     char*    pData;
 };
+
+/*
+struct stStopRecv
+{
+};
+*/
 
 struct stOutEvent
 {

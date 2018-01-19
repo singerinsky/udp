@@ -1,1 +1,2 @@
+/home/gl/git/udp/udp_server/proto_message/CMakeFiles/message_lib.dir
 /home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir

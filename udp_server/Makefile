@@ -111,6 +111,19 @@ udp_server/fast:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/build
 .PHONY : udp_server/fast
 
+#=============================================================================
+# Target rules for targets named message_lib
+
+# Build rule for target.
+message_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 message_lib
+.PHONY : message_lib
+
+# fast build rule for target.
+message_lib/fast:
+	$(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/build
+.PHONY : message_lib/fast
+
 callbacks.o: callbacks.c.o
 .PHONY : callbacks.o
 
@@ -230,6 +243,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+message_process.o: message_process.cpp.o
+.PHONY : message_process.o
+
+# target to build an object file
+message_process.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/message_process.cpp.o
+.PHONY : message_process.cpp.o
+
+message_process.i: message_process.cpp.i
+.PHONY : message_process.i
+
+# target to preprocess a source file
+message_process.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/message_process.cpp.i
+.PHONY : message_process.cpp.i
+
+message_process.s: message_process.cpp.s
+.PHONY : message_process.s
+
+# target to generate assembly for a file
+message_process.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/message_process.cpp.s
+.PHONY : message_process.cpp.s
 
 netrequestmgr.o: netrequestmgr.cpp.o
 .PHONY : netrequestmgr.o
@@ -480,6 +517,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... udp_server"
+	@echo "... message_lib"
 	@echo "... callbacks.o"
 	@echo "... callbacks.i"
 	@echo "... callbacks.s"
@@ -495,6 +533,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... message_process.o"
+	@echo "... message_process.i"
+	@echo "... message_process.s"
 	@echo "... netrequestmgr.o"
 	@echo "... netrequestmgr.i"
 	@echo "... netrequestmgr.s"

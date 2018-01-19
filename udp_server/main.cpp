@@ -5,6 +5,9 @@
 #include "netrequestmgr.h"
 #include "timer_manager.h"
 #include "character_mgr.h"
+#include <glog/logging.h>
+#include "message.pb.h"
+
 
 void process_event()
 {
@@ -18,16 +21,16 @@ void process_event()
             {
                 ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
                 printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
-                net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
+                //net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
+                SoccerPlayerInfoRequest request;
+                std::string name = request.GetTypeName();
+                LOG(INFO)<<name;
             }
             break;
         case eConnectFail:
             break;
         case eRecv:
-            printf("data len %d =>%s\n",
-                    pevent->stUn.recvEvt.dwLen,
-                    pevent->stUn.recvEvt.pData);
-            //decode message
+            LOG(INFO)<<"data len"<<pevent->stUn.recvEvt.dwLen<<" data"<<pevent->stUn.recvEvt.pData; //decode message
             if(pevent->stUn.recvEvt.pData != NULL){
                 delete pevent->stUn.recvEvt.pData; 
             }
@@ -40,10 +43,14 @@ void process_event()
    delete pevent;
 }
 
-int main(){
+int main(int argc, char** argv){
+    google::ParseCommandLineFlags(&argc,&argv,true); 
+    google::InitGoogleLogging(argv[0]);
+    FLAGS_logtostderr =true;
+
     if (enet_initialize () != 0)
     {
-        printf ("An error occurred while initializing ENet.\n");
+        LOG(ERROR)<<"error of enet!";
         return -1;
     }
 
@@ -51,16 +58,22 @@ int main(){
     timer_manager::Instance()->init(14);
     net_request_mgr::CreateInstance();
     udp_server::CreateInstance();
+    //new thread process receive message!
     udp_server* pServer = udp_server::Instance();//udp_server::Instance();
     pServer->init("0.0.0.0",1234,1000);
     pServer->create();
     CCharacterMgr mgr;
-    while(true){
+    bool bRun = true;
+    while(bRun){
         //netrequestmgr::Instance()->pop_event();
         timer_manager::Instance()->run_until_now();
         process_event();
         usleep(10); 
+        //net_request_mgr::Instance()->dump_statis();
     }
+    timer_manager::DestoryInstance();
+    net_request_mgr::DestoryInstance();
+
     atexit(enet_deinitialize);
     return 0;
 }

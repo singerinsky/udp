@@ -7,6 +7,7 @@
 
 #include "udpserver.h"
 #include "netrequestmgr.h"
+#include "serverpch.h"
 
 INSTANCE_SINGLETON(udp_server);
 
@@ -35,7 +36,7 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
         printf("start udpserver failed!\n");
 		return false;
 	}
-    printf("start udpserver successed!\n");
+    LOG(INFO)<<"start udpserver successed!\n";
 	return true;
 }
 
@@ -44,12 +45,10 @@ bool udp_server::loop(){
         ENetEvent *event = new ENetEvent();
 	    while(m_bRun){
             net_request_mgr::Instance()->process_out_event(1);
-	        //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
             uint32_t loopCount = 0;
 	        while ((loopCount++ < 300)
-                    &&(enet_host_service (m_pServer, event, 10) > 0))
+                    &&(enet_host_service (m_pServer, event, 0) > 0))
 	        {
-	            //printf("loop enet :%u=%u\n",(uint32_t)time(NULL),enet_time_get());
 	            switch (event->type)
 	            {
 	                case ENET_EVENT_TYPE_CONNECT:

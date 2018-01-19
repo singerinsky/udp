@@ -21,6 +21,8 @@
 #include <string>
 #include <enet/enet.h>
 #include <assert.h>
+#include <glog/logging.h>
+#include "singleton.h"
 
 typedef unsigned int e_uint32;
 typedef int e_int32;

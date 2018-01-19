@@ -91,6 +91,11 @@ CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/main.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/main.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/main.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/main.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/main.cpp.o: ./include/glog/vlog_is_on.h
+CMakeFiles/udp_server.dir/main.cpp.o: ./proto_message/message.pb.h
 CMakeFiles/udp_server.dir/main.cpp.o: character_mgr.h
 CMakeFiles/udp_server.dir/main.cpp.o: event_define.h
 CMakeFiles/udp_server.dir/main.cpp.o: lock.h
@@ -104,6 +109,23 @@ CMakeFiles/udp_server.dir/main.cpp.o: time_util.h
 CMakeFiles/udp_server.dir/main.cpp.o: timer_manager.h
 CMakeFiles/udp_server.dir/main.cpp.o: udpserver.h
 
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/callbacks.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/enet.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/list.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/protocol.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/types.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/unix.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/vlog_is_on.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: ./proto_message/message.pb.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
+CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: singleton.h
+
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/callbacks.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/enet.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/list.h
@@ -111,6 +133,10 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: event_define.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: lock.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: netrequestmgr.cpp
@@ -128,7 +154,12 @@ CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/thread.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/thread.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/thread.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/thread.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/thread.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/thread.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.h
 
@@ -144,6 +175,10 @@ CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/udpserver.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: event_define.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: lock.h
 CMakeFiles/udp_server.dir/udpserver.cpp.o: netrequestmgr.h
@@ -161,6 +196,10 @@ CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/udpserver_test.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: lock.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: queue.h
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: serverpch.h

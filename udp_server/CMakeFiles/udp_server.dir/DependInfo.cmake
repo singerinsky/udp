@@ -18,6 +18,7 @@ SET(CMAKE_DEPENDS_CHECK_C
 SET(CMAKE_C_COMPILER_ID "GNU")
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/gl/git/udp/udp_server/main.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/main.cpp.o"
+  "/home/gl/git/udp/udp_server/message_process.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/message_process.cpp.o"
   "/home/gl/git/udp/udp_server/netrequestmgr.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/netrequestmgr.cpp.o"
   "/home/gl/git/udp/udp_server/thread.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/thread.cpp.o"
   "/home/gl/git/udp/udp_server/timer_manager.cpp" "/home/gl/git/udp/udp_server/CMakeFiles/udp_server.dir/timer_manager.cpp.o"
@@ -28,11 +29,13 @@ SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/gl/git/udp/udp_server/proto_message/CMakeFiles/message_lib.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "./include"
+  "./proto_message"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

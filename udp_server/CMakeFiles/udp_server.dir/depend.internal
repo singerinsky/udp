@@ -92,6 +92,11 @@ CMakeFiles/udp_server.dir/main.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
+ ./proto_message/message.pb.h
  /home/gl/git/udp/udp_server/character_mgr.h
  /home/gl/git/udp/udp_server/event_define.h
  /home/gl/git/udp/udp_server/lock.h
@@ -104,6 +109,23 @@ CMakeFiles/udp_server.dir/main.cpp.o
  /home/gl/git/udp/udp_server/time_util.h
  /home/gl/git/udp/udp_server/timer_manager.h
  /home/gl/git/udp/udp_server/udpserver.h
+CMakeFiles/udp_server.dir/message_process.cpp.o
+ ./include/enet/callbacks.h
+ ./include/enet/enet.h
+ ./include/enet/list.h
+ ./include/enet/protocol.h
+ ./include/enet/types.h
+ ./include/enet/unix.h
+ ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
+ ./proto_message/message.pb.h
+ /home/gl/git/udp/udp_server/message_process.cpp
+ /home/gl/git/udp/udp_server/message_process.h
+ /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/singleton.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o
  ./include/enet/callbacks.h
  ./include/enet/enet.h
@@ -112,6 +134,10 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
  /home/gl/git/udp/udp_server/event_define.h
  /home/gl/git/udp/udp_server/lock.h
  /home/gl/git/udp/udp_server/netrequestmgr.cpp
@@ -129,7 +155,12 @@ CMakeFiles/udp_server.dir/thread.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
  /home/gl/git/udp/udp_server/serverpch.h
+ /home/gl/git/udp/udp_server/singleton.h
  /home/gl/git/udp/udp_server/thread.cpp
  /home/gl/git/udp/udp_server/thread.h
 CMakeFiles/udp_server.dir/timer_manager.cpp.o
@@ -145,6 +176,10 @@ CMakeFiles/udp_server.dir/udpserver.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
  /home/gl/git/udp/udp_server/event_define.h
  /home/gl/git/udp/udp_server/lock.h
  /home/gl/git/udp/udp_server/netrequestmgr.h
@@ -162,6 +197,10 @@ CMakeFiles/udp_server.dir/udpserver_test.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./include/gflags/gflags.h
+ ./include/glog/log_severity.h
+ ./include/glog/logging.h
+ ./include/glog/vlog_is_on.h
  /home/gl/git/udp/udp_server/lock.h
  /home/gl/git/udp/udp_server/queue.h
  /home/gl/git/udp/udp_server/serverpch.h

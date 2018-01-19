@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../lib/libmessage_lib.a  CMakeFiles/message_lib.dir/message.pb.cc.o
+/usr/bin/ranlib ../lib/libmessage_lib.a

@@ -13,6 +13,7 @@ void net_request_mgr::push_recv_event(e_uint32 uConnID,const char* pData,e_uint3
     pevent->stUn.recvEvt.pData = buff;
     pevent->stUn.recvEvt.dwLen = nlen;
     _net_request_queue.enqueue(pevent);
+    _statis.uRecvCount++;
 }
 
 void net_request_mgr::push_conn_event(e_uint32 uConnID,e_uint32 uRemoteIP,e_uint32 uRemotePort)
@@ -23,6 +24,7 @@ void net_request_mgr::push_conn_event(e_uint32 uConnID,e_uint32 uRemoteIP,e_uint
     pevent->stUn.connEvt.dwRemoteIP = uRemoteIP; 
     pevent->stUn.connEvt.dwRemotePort = uRemotePort; 
     _net_request_queue.enqueue(pevent); 
+    _statis.uRecvCount++;
 }
 
 void net_request_mgr::push_disconn_event(e_uint32 uConnID,e_uint32 uRemoteIP,e_uint32 uRemotePort)
@@ -33,10 +35,14 @@ void net_request_mgr::push_disconn_event(e_uint32 uConnID,e_uint32 uRemoteIP,e_u
     pevent->stUn.connEvt.dwRemoteIP = uRemoteIP; 
     pevent->stUn.connEvt.dwRemotePort = uRemotePort; 
     _net_request_queue.enqueue(pevent); 
+    _statis.uRecvCount++;
 }
 
 stInEvent* net_request_mgr::pop_in_event(){
     stInEvent* pevent = _net_request_queue.dequeue();
+    if(pevent != NULL){
+        _statis.uProcessCount++;
+    }
     return pevent;
 }
 
@@ -72,9 +78,9 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
                     ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.disOutEvt.dwConnID);
                     if(peer != NULL){
                         enet_peer_disconnect_now(peer,0); 
-                        printf("disconnect peer!\n");
+                        LOG(INFO)<<"disconnect peer!\n";
                     }else{
-                        printf("error of disconnect !failed find peer!\n"); 
+                        LOG(ERROR)<<"error of disconnect !failed find peer!\n"; 
                     }
                 }
                 break;
@@ -86,11 +92,11 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
                     memcpy((char*)packet->data,pevent->stUn.sendOutEvt.pData,pevent->stUn.sendOutEvt.sendLen);
                     ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.sendOutEvt.dwConnID);
                     if(peer != NULL){
-                        printf("send data back to client!\n");
+                        LOG(INFO)<<"send data back to client!\n";
                         enet_peer_send(peer,0,packet);
                     }else
                     {
-                        printf("error of send data,failed find peer!\n"); 
+                        LOG(ERROR)<<"error of send data,failed find peer!\n"; 
                     }
                 }
                 break;

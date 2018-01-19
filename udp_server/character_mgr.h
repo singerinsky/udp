@@ -13,7 +13,6 @@ class CCharacterMgr
             _timer.set_owner(this);    
             _timer.set_expired(timer_manager::Instance()->get_run_ms()+1000);
             timer_manager::Instance()->add_timer(&_timer);
-            printf("add timer success!\n");
        }
 
         void _on_timeout(timer_manager* mgr){

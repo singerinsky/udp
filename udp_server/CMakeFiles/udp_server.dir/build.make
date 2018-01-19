@@ -371,9 +371,32 @@ CMakeFiles/udp_server.dir/compress.c.o.provides: CMakeFiles/udp_server.dir/compr
 
 CMakeFiles/udp_server.dir/compress.c.o.provides.build: CMakeFiles/udp_server.dir/compress.c.o
 
+CMakeFiles/udp_server.dir/message_process.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/message_process.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/message_process.cpp.o -c /home/gl/git/udp/udp_server/message_process.cpp
+
+CMakeFiles/udp_server.dir/message_process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/message_process.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/message_process.cpp > CMakeFiles/udp_server.dir/message_process.cpp.i
+
+CMakeFiles/udp_server.dir/message_process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/message_process.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/message_process.cpp -o CMakeFiles/udp_server.dir/message_process.cpp.s
+
+CMakeFiles/udp_server.dir/message_process.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/message_process.cpp.o.requires
+
+CMakeFiles/udp_server.dir/message_process.cpp.o.provides: CMakeFiles/udp_server.dir/message_process.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/message_process.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/message_process.cpp.o.provides
+
+CMakeFiles/udp_server.dir/message_process.cpp.o.provides.build: CMakeFiles/udp_server.dir/message_process.cpp.o
+
 CMakeFiles/udp_server.dir/main.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/main.cpp.o -c /home/gl/git/udp/udp_server/main.cpp
 
@@ -410,6 +433,7 @@ udp_server_OBJECTS = \
 "CMakeFiles/udp_server.dir/protocol.c.o" \
 "CMakeFiles/udp_server.dir/timer_manager.cpp.o" \
 "CMakeFiles/udp_server.dir/compress.c.o" \
+"CMakeFiles/udp_server.dir/message_process.cpp.o" \
 "CMakeFiles/udp_server.dir/main.cpp.o"
 
 # External object files for target udp_server
@@ -429,8 +453,10 @@ udp_server: CMakeFiles/udp_server.dir/netrequestmgr.cpp.o
 udp_server: CMakeFiles/udp_server.dir/protocol.c.o
 udp_server: CMakeFiles/udp_server.dir/timer_manager.cpp.o
 udp_server: CMakeFiles/udp_server.dir/compress.c.o
+udp_server: CMakeFiles/udp_server.dir/message_process.cpp.o
 udp_server: CMakeFiles/udp_server.dir/main.cpp.o
 udp_server: CMakeFiles/udp_server.dir/build.make
+udp_server: lib/libmessage_lib.a
 udp_server: CMakeFiles/udp_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable udp_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/udp_server.dir/link.txt --verbose=$(VERBOSE)
@@ -453,6 +479,7 @@ CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/netrequestmgr.cpp.
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/protocol.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/timer_manager.cpp.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/compress.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/message_process.cpp.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/main.cpp.o.requires
 .PHONY : CMakeFiles/udp_server.dir/requires
 
