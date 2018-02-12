@@ -104,6 +104,7 @@ CMakeFiles/udp_server.dir/main.cpp.o: netrequestmgr.h
 CMakeFiles/udp_server.dir/main.cpp.o: queue.h
 CMakeFiles/udp_server.dir/main.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/main.cpp.o: singleton.h
+CMakeFiles/udp_server.dir/main.cpp.o: system_util.h
 CMakeFiles/udp_server.dir/main.cpp.o: thread.h
 CMakeFiles/udp_server.dir/main.cpp.o: time_util.h
 CMakeFiles/udp_server.dir/main.cpp.o: timer_manager.h
@@ -121,6 +122,7 @@ CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/log_severity.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/logging.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./proto_message/message.pb.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: bit_order.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: serverpch.h

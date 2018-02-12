@@ -7,6 +7,7 @@
 #include "character_mgr.h"
 #include <glog/logging.h>
 #include "message.pb.h"
+#include "system_util.h"
 
 
 void process_event()
@@ -43,10 +44,18 @@ void process_event()
    delete pevent;
 }
 
+DEFINE_bool(daemon,false,"run in daemon");
+
 int main(int argc, char** argv){
     google::ParseCommandLineFlags(&argc,&argv,true); 
     google::InitGoogleLogging(argv[0]);
-    FLAGS_logtostderr =true;
+    if(FLAGS_daemon == false){
+        LOG(INFO)<<"run in front..."; 
+        FLAGS_logtostderr =true;
+    }else{
+        LOG(INFO)<<"run in background"; 
+        daemon_init_func(1,1);
+    }
 
     if (enet_initialize () != 0)
     {
