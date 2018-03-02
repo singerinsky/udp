@@ -118,9 +118,32 @@ CMakeFiles/udp_server.dir/list.c.o.provides: CMakeFiles/udp_server.dir/list.c.o.
 
 CMakeFiles/udp_server.dir/list.c.o.provides.build: CMakeFiles/udp_server.dir/list.c.o
 
+CMakeFiles/udp_server.dir/request_function.cpp.o: CMakeFiles/udp_server.dir/flags.make
+CMakeFiles/udp_server.dir/request_function.cpp.o: request_function.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/request_function.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/request_function.cpp.o -c /home/gl/git/udp/udp_server/request_function.cpp
+
+CMakeFiles/udp_server.dir/request_function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/udp_server.dir/request_function.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/gl/git/udp/udp_server/request_function.cpp > CMakeFiles/udp_server.dir/request_function.cpp.i
+
+CMakeFiles/udp_server.dir/request_function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/udp_server.dir/request_function.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/gl/git/udp/udp_server/request_function.cpp -o CMakeFiles/udp_server.dir/request_function.cpp.s
+
+CMakeFiles/udp_server.dir/request_function.cpp.o.requires:
+.PHONY : CMakeFiles/udp_server.dir/request_function.cpp.o.requires
+
+CMakeFiles/udp_server.dir/request_function.cpp.o.provides: CMakeFiles/udp_server.dir/request_function.cpp.o.requires
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/request_function.cpp.o.provides.build
+.PHONY : CMakeFiles/udp_server.dir/request_function.cpp.o.provides
+
+CMakeFiles/udp_server.dir/request_function.cpp.o.provides.build: CMakeFiles/udp_server.dir/request_function.cpp.o
+
 CMakeFiles/udp_server.dir/packet.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/packet.c.o: packet.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/packet.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/packet.c.o   -c /home/gl/git/udp/udp_server/packet.c
 
@@ -143,7 +166,7 @@ CMakeFiles/udp_server.dir/packet.c.o.provides.build: CMakeFiles/udp_server.dir/p
 
 CMakeFiles/udp_server.dir/win32.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/win32.c.o: win32.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/win32.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/win32.c.o   -c /home/gl/git/udp/udp_server/win32.c
 
@@ -166,7 +189,7 @@ CMakeFiles/udp_server.dir/win32.c.o.provides.build: CMakeFiles/udp_server.dir/wi
 
 CMakeFiles/udp_server.dir/callbacks.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/callbacks.c.o: callbacks.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/callbacks.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/callbacks.c.o   -c /home/gl/git/udp/udp_server/callbacks.c
 
@@ -189,7 +212,7 @@ CMakeFiles/udp_server.dir/callbacks.c.o.provides.build: CMakeFiles/udp_server.di
 
 CMakeFiles/udp_server.dir/peer.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/peer.c.o: peer.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/peer.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/peer.c.o   -c /home/gl/git/udp/udp_server/peer.c
 
@@ -212,7 +235,7 @@ CMakeFiles/udp_server.dir/peer.c.o.provides.build: CMakeFiles/udp_server.dir/pee
 
 CMakeFiles/udp_server.dir/thread.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/thread.cpp.o: thread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/thread.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/thread.cpp.o -c /home/gl/git/udp/udp_server/thread.cpp
 
@@ -235,7 +258,7 @@ CMakeFiles/udp_server.dir/thread.cpp.o.provides.build: CMakeFiles/udp_server.dir
 
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/udpserver_test.cpp.o: udpserver_test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver_test.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver_test.cpp.o -c /home/gl/git/udp/udp_server/udpserver_test.cpp
 
@@ -258,7 +281,7 @@ CMakeFiles/udp_server.dir/udpserver_test.cpp.o.provides.build: CMakeFiles/udp_se
 
 CMakeFiles/udp_server.dir/udpserver.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/udpserver.cpp.o: udpserver.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/udpserver.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/udpserver.cpp.o -c /home/gl/git/udp/udp_server/udpserver.cpp
 
@@ -281,7 +304,7 @@ CMakeFiles/udp_server.dir/udpserver.cpp.o.provides.build: CMakeFiles/udp_server.
 
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: netrequestmgr.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/netrequestmgr.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/netrequestmgr.cpp.o -c /home/gl/git/udp/udp_server/netrequestmgr.cpp
 
@@ -304,7 +327,7 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o.provides.build: CMakeFiles/udp_ser
 
 CMakeFiles/udp_server.dir/protocol.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/protocol.c.o: protocol.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/protocol.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/protocol.c.o   -c /home/gl/git/udp/udp_server/protocol.c
 
@@ -327,7 +350,7 @@ CMakeFiles/udp_server.dir/protocol.c.o.provides.build: CMakeFiles/udp_server.dir
 
 CMakeFiles/udp_server.dir/timer_manager.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/timer_manager.cpp.o: timer_manager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/timer_manager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/timer_manager.cpp.o -c /home/gl/git/udp/udp_server/timer_manager.cpp
 
@@ -350,7 +373,7 @@ CMakeFiles/udp_server.dir/timer_manager.cpp.o.provides.build: CMakeFiles/udp_ser
 
 CMakeFiles/udp_server.dir/compress.c.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/compress.c.o: compress.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/udp_server.dir/compress.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/udp_server.dir/compress.c.o   -c /home/gl/git/udp/udp_server/compress.c
 
@@ -373,7 +396,7 @@ CMakeFiles/udp_server.dir/compress.c.o.provides.build: CMakeFiles/udp_server.dir
 
 CMakeFiles/udp_server.dir/message_process.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/message_process.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/message_process.cpp.o -c /home/gl/git/udp/udp_server/message_process.cpp
 
@@ -396,7 +419,7 @@ CMakeFiles/udp_server.dir/message_process.cpp.o.provides.build: CMakeFiles/udp_s
 
 CMakeFiles/udp_server.dir/main.cpp.o: CMakeFiles/udp_server.dir/flags.make
 CMakeFiles/udp_server.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/gl/git/udp/udp_server/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/udp_server.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/udp_server.dir/main.cpp.o -c /home/gl/git/udp/udp_server/main.cpp
 
@@ -422,6 +445,7 @@ udp_server_OBJECTS = \
 "CMakeFiles/udp_server.dir/host.c.o" \
 "CMakeFiles/udp_server.dir/unix.c.o" \
 "CMakeFiles/udp_server.dir/list.c.o" \
+"CMakeFiles/udp_server.dir/request_function.cpp.o" \
 "CMakeFiles/udp_server.dir/packet.c.o" \
 "CMakeFiles/udp_server.dir/win32.c.o" \
 "CMakeFiles/udp_server.dir/callbacks.c.o" \
@@ -442,6 +466,7 @@ udp_server_EXTERNAL_OBJECTS =
 udp_server: CMakeFiles/udp_server.dir/host.c.o
 udp_server: CMakeFiles/udp_server.dir/unix.c.o
 udp_server: CMakeFiles/udp_server.dir/list.c.o
+udp_server: CMakeFiles/udp_server.dir/request_function.cpp.o
 udp_server: CMakeFiles/udp_server.dir/packet.c.o
 udp_server: CMakeFiles/udp_server.dir/win32.c.o
 udp_server: CMakeFiles/udp_server.dir/callbacks.c.o
@@ -468,6 +493,7 @@ CMakeFiles/udp_server.dir/build: udp_server
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/host.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/unix.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/list.c.o.requires
+CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/request_function.cpp.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/packet.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/win32.c.o.requires
 CMakeFiles/udp_server.dir/requires: CMakeFiles/udp_server.dir/callbacks.c.o.requires

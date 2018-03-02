@@ -123,8 +123,10 @@ CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/logging.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./proto_message/message.pb.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: bit_order.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: event_define.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: request_function.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: singleton.h
 
@@ -148,6 +150,24 @@ CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: singleton.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: thread.h
 CMakeFiles/udp_server.dir/netrequestmgr.cpp.o: udpserver.h
+
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/callbacks.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/enet.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/list.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/protocol.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/types.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/unix.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/vlog_is_on.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: ./proto_message/message.pb.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: event_define.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: request_function.cpp
+CMakeFiles/udp_server.dir/request_function.cpp.o: request_function.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: serverpch.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: singleton.h
 
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/callbacks.h
 CMakeFiles/udp_server.dir/thread.cpp.o: ./include/enet/enet.h

@@ -2,6 +2,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/udp_server.dir/host.c.o"
   "CMakeFiles/udp_server.dir/unix.c.o"
   "CMakeFiles/udp_server.dir/list.c.o"
+  "CMakeFiles/udp_server.dir/request_function.cpp.o"
   "CMakeFiles/udp_server.dir/packet.c.o"
   "CMakeFiles/udp_server.dir/win32.c.o"
   "CMakeFiles/udp_server.dir/callbacks.c.o"

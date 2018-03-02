@@ -364,6 +364,30 @@ protocol.c.s:
 	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/protocol.c.s
 .PHONY : protocol.c.s
 
+request_function.o: request_function.cpp.o
+.PHONY : request_function.o
+
+# target to build an object file
+request_function.cpp.o:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/request_function.cpp.o
+.PHONY : request_function.cpp.o
+
+request_function.i: request_function.cpp.i
+.PHONY : request_function.i
+
+# target to preprocess a source file
+request_function.cpp.i:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/request_function.cpp.i
+.PHONY : request_function.cpp.i
+
+request_function.s: request_function.cpp.s
+.PHONY : request_function.s
+
+# target to generate assembly for a file
+request_function.cpp.s:
+	$(MAKE) -f CMakeFiles/udp_server.dir/build.make CMakeFiles/udp_server.dir/request_function.cpp.s
+.PHONY : request_function.cpp.s
+
 thread.o: thread.cpp.o
 .PHONY : thread.o
 
@@ -548,6 +572,9 @@ help:
 	@echo "... protocol.o"
 	@echo "... protocol.i"
 	@echo "... protocol.s"
+	@echo "... request_function.o"
+	@echo "... request_function.i"
+	@echo "... request_function.s"
 	@echo "... thread.o"
 	@echo "... thread.i"
 	@echo "... thread.s"

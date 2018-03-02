@@ -31,7 +31,9 @@ void process_event()
         case eConnectFail:
             break;
         case eRecv:
-            LOG(INFO)<<"data len"<<pevent->stUn.recvEvt.dwLen<<" data"<<pevent->stUn.recvEvt.pData; //decode message
+            LOG(INFO)<<"data len"<<pevent->stUn.recvEvt.dwLen
+                <<" data"<<pevent->stUn.recvEvt.pData; //decode message
+
             if(pevent->stUn.recvEvt.pData != NULL){
                 delete pevent->stUn.recvEvt.pData; 
             }
