@@ -81,6 +81,7 @@ udp_client_EXTERNAL_OBJECTS =
 
 udp_client: CMakeFiles/udp_client.dir/main.cpp.o
 udp_client: CMakeFiles/udp_client.dir/build.make
+udp_client: lib/libmessage_lib.a
 udp_client: CMakeFiles/udp_client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable udp_client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/udp_client.dir/link.txt --verbose=$(VERBOSE)

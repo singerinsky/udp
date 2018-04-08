@@ -155,6 +155,9 @@ game_exe_BINARY_DIR:STATIC=/home/gl/git/udp/udp_client
 //Value Computed by CMake
 game_exe_SOURCE_DIR:STATIC=/home/gl/git/udp/udp_client
 
+//Dependencies for target
+message_lib_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries
@@ -234,7 +237,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=1
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=2
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-2.8
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS

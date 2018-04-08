@@ -9,4 +9,7 @@ CMakeFiles/udp_client.dir/main.cpp.o
  ./include/enet/types.h
  ./include/enet/unix.h
  ./include/enet/win32.h
+ ./proto_message/message.pb.h
+ /home/gl/git/udp/udp_client/bit_order.h
  /home/gl/git/udp/udp_client/main.cpp
+ /home/gl/git/udp/udp_client/message_build.h

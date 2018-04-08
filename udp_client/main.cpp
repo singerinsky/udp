@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <enet/enet.h>
 #include <string.h>
+#include "message_build.h"
 
 bool create_client(){
 
@@ -39,12 +40,10 @@ bool create_client(){
 
         enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
         while(true){
-            ENetPacket *packet1=enet_packet_create(NULL,13,ENET_PACKET_FLAG_RELIABLE); //创建包
-            memcpy((char*)packet1->data,"Hello,World!",13);
-            enet_peer_send(peer,0,packet1);
-            enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
-            sleep(1);
 
+            send_message_reliable();
+            enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+            usleep(10);
         }
         
     }

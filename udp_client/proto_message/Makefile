@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/git/udp/udp_client/CMakeFiles /home/gl/git/udp/udp_client/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/gl/git/udp/udp_client && $(CMAKE_COMMAND) -E cmake_progress_start /home/gl/git/udp/udp_client/CMakeFiles /home/gl/git/udp/udp_client/proto_message/CMakeFiles/progress.marks
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f CMakeFiles/Makefile2 proto_message/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gl/git/udp/udp_client/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f CMakeFiles/Makefile2 proto_message/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,68 +85,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f CMakeFiles/Makefile2 proto_message/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f CMakeFiles/Makefile2 proto_message/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gl/git/udp/udp_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named udp_client
+# Convenience name for target.
+proto_message/CMakeFiles/message_lib.dir/rule:
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f CMakeFiles/Makefile2 proto_message/CMakeFiles/message_lib.dir/rule
+.PHONY : proto_message/CMakeFiles/message_lib.dir/rule
 
-# Build rule for target.
-udp_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 udp_client
-.PHONY : udp_client
-
-# fast build rule for target.
-udp_client/fast:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/build
-.PHONY : udp_client/fast
-
-#=============================================================================
-# Target rules for targets named message_lib
-
-# Build rule for target.
-message_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 message_lib
+# Convenience name for target.
+message_lib: proto_message/CMakeFiles/message_lib.dir/rule
 .PHONY : message_lib
 
 # fast build rule for target.
 message_lib/fast:
-	$(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/build
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/build
 .PHONY : message_lib/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+message.pb.o: message.pb.cc.o
+.PHONY : message.pb.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/main.cpp.o
-.PHONY : main.cpp.o
+message.pb.cc.o:
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+message.pb.i: message.pb.cc.i
+.PHONY : message.pb.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/main.cpp.i
-.PHONY : main.cpp.i
+message.pb.cc.i:
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+message.pb.s: message.pb.cc.s
+.PHONY : message.pb.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/udp_client.dir/build.make CMakeFiles/udp_client.dir/main.cpp.s
-.PHONY : main.cpp.s
+message.pb.cc.s:
+	cd /home/gl/git/udp/udp_client && $(MAKE) -f proto_message/CMakeFiles/message_lib.dir/build.make proto_message/CMakeFiles/message_lib.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
 
 # Help Target
 help:
@@ -155,12 +143,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... udp_client"
 	@echo "... message_lib"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... rebuild_cache"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 .PHONY : help
 
 
@@ -172,6 +159,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gl/git/udp/udp_client && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
