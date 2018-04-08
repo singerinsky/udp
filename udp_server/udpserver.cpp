@@ -52,7 +52,8 @@ bool udp_server::loop(){
 	            switch (event->type)
 	            {
 	                case ENET_EVENT_TYPE_CONNECT:
-                        char ip_str[24];
+                        char ip_str[24] ;
+                        memset(ip_str,0,sizeof(ip_str));
                         enet_address_get_host_ip(&(event->peer->address),ip_str,24);
                         net_request_mgr::Instance()->push_conn_event(event->peer->connectID,
                                 event->peer->address.host,

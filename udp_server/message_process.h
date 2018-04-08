@@ -30,20 +30,25 @@ class message_process
 {
     DECLARE_SINGLETON(message_process);
     public:
-        void    parse_message(stInEvent* pEvent, char* pData, e_uint32 nLen) 
+        int parse_message(stInEvent* pEvent, char* pData, e_uint32 nLen) 
         {
-            assert(nLen > sizeof(e_uint32));
-            e_uint32 uMessageType = 0;
+            assert(nLen > 2*sizeof(e_uint32));
+            e_uint32 uMessageType = 0,uMessageLen;
             memcpy(&uMessageType,pData,sizeof(e_uint32));
+            memcpy(&uMessageLen,pData+4,sizeof(e_uint32));
             uMessageType = ntoh_int32(uMessageType);
-            membuf buf(pData,nLen);
+            membuf buf(pData+8,nLen);
             istream istr(&buf);
             switch(uMessageType){
                 MESSAGE_DISPATCH(MSG_HEART_BEAT,ClientHeartBeatRequest ) 
             
                 default:
+                {
                     LOG(ERROR)<<"undefined message!";
+                    return -1;
+                }
             }
+            return 1;
             //google::protobuf::Message message;//  = new google::protobuf::Message();
             //message.ParseFromIstream(&istr);
         };

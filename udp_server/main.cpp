@@ -8,6 +8,7 @@
 #include <glog/logging.h>
 #include "message.pb.h"
 #include "system_util.h"
+#include "message_process.h"
 
 
 void process_event()
@@ -31,13 +32,16 @@ void process_event()
         case eConnectFail:
             break;
         case eRecv:
-            LOG(INFO)<<"data len"<<pevent->stUn.recvEvt.dwLen
-                <<" data"<<pevent->stUn.recvEvt.pData; //decode message
+            {
+                int ret = message_process::Instance()->parse_message(pevent,
+                        pevent->stUn.recvEvt.pData,
+                        pevent->stUn.recvEvt.dwLen);
 
-            if(pevent->stUn.recvEvt.pData != NULL){
-                delete pevent->stUn.recvEvt.pData; 
+                if(pevent->stUn.recvEvt.pData != NULL){
+                    delete pevent->stUn.recvEvt.pData; 
+                }
+                break;
             }
-            break;
         case eDisConnect:
             break;
         case eNone:
