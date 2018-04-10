@@ -6,6 +6,7 @@
 #include "bit_order.h"
 #include <sstream>
 #include <stdio.h>
+#include <glog/logging.h>
 
 using namespace std;
 using namespace google;
@@ -27,7 +28,8 @@ void send_message_reliable(ENetPeer* peer,protobuf::Message* pMessage,int uMessa
          fprintf (stderr, 
                 "error parse!");
     }
-    enet_peer_send(peer,0,packet);
+    int sendLen = enet_peer_send(peer,0,packet);
+    //    LOG(INFO)<<"send "<<sendLen <<" totoal "<< ntoh_int32(uMessageLen);
 }
 
 #endif

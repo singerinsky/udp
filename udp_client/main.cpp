@@ -3,6 +3,7 @@
 #include <enet/enet.h>
 #include <string.h>
 #include "message_build.h"
+#include <glog/logging.h>
 
 bool create_client(){
 
@@ -39,13 +40,61 @@ bool create_client(){
     {
 
         enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+        enet_peer_timeout(peer,1000,1000,1000);
+        int count = 0;
         while(true){
-
-            send_message_reliable();
-            enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
-            usleep(10);
+            enet_host_service(client,&event,10);
+            if(event.type == ENET_EVENT_TYPE_DISCONNECT){
+                LOG(INFO)<<"server out service!";
+                enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+                break;
+            }else if(event.type == ENET_EVENT_TYPE_RECEIVE){
+                LOG(INFO)<<"receive message from server!"; 
+                enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+            }else {
+                ClientLoginRequest loginRequest;
+                loginRequest.set_player_id(count);
+                loginRequest.set_player_pwd("nice");
+                loginRequest.set_md5_code("nniceniceniceniceniceniceniceniceniceniceniceniceniceniceice\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
+                        pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppe");
+                send_message_reliable(peer,&loginRequest,MSG_CLIENT_LOGIN);
+                ClientHeartBeatRequest request;
+                request.set_client_time(count);
+                //send_message_reliable(peer,&request,MSG_HEART_BEAT);
+                enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+                LOG(INFO)<<"send message!"<<count<<" length:"<<loginRequest.md5_code().length();
+                count++;
+            }
         }
-        
     }
     else
     {
@@ -59,7 +108,10 @@ bool create_client(){
     return true;
 }
 
-int main(){
+int main(int argc,char** argv){
+    google::ParseCommandLineFlags(&argc,&argv,true);
+    google::InitGoogleLogging(argv[0]);
+    FLAGS_logtostderr =true; 
     if (enet_initialize () != 0)
     {
         printf ("An error occurred while initializing ENet.\n");

@@ -49,6 +49,7 @@ bool udp_server::loop(){
 	        while ((loopCount++ < 300)
                     &&(enet_host_service (m_pServer, event, 0) > 0))
 	        {
+                LOG(INFO)<<"in loop"<<loopCount;
 	            switch (event->type)
 	            {
 	                case ENET_EVENT_TYPE_CONNECT:
@@ -74,7 +75,7 @@ bool udp_server::loop(){
                         net_request_mgr::Instance()->push_disconn_event(event->peer->connectID,
                                 event->peer->address.host,
                                 event->peer->address.port);
-	                    printf ("%s disconnected.\n", event->peer -> data);
+                        LOG(INFO)<<"Client disconnectd!";
 	                    /* Reset the peer's client information. */
 	                    event->peer -> data = NULL;
 	                    break;
@@ -84,6 +85,7 @@ bool udp_server::loop(){
                 //check event,valid event should push list
                 //TODO 
 	        }
+            usleep(10);
 	    }
         delete event;
         return true;

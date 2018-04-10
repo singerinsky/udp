@@ -28,4 +28,4 @@ ADD_SUBDIRECTORY(proto_message proto_message)
 AUX_SOURCE_DIRECTORY(. DIR_SRCS)
 
 ADD_EXECUTABLE(udp_client ${DIR_SRCS})
-TARGET_LINK_LIBRARIES(udp_client enet protobuf message_lib)
+TARGET_LINK_LIBRARIES(udp_client enet protobuf message_lib gflags glog)

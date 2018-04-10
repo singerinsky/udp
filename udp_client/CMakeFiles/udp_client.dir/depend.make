@@ -8,6 +8,10 @@ CMakeFiles/udp_client.dir/main.cpp.o: ./include/enet/protocol.h
 CMakeFiles/udp_client.dir/main.cpp.o: ./include/enet/types.h
 CMakeFiles/udp_client.dir/main.cpp.o: ./include/enet/unix.h
 CMakeFiles/udp_client.dir/main.cpp.o: ./include/enet/win32.h
+CMakeFiles/udp_client.dir/main.cpp.o: ./include/gflags/gflags.h
+CMakeFiles/udp_client.dir/main.cpp.o: ./include/glog/log_severity.h
+CMakeFiles/udp_client.dir/main.cpp.o: ./include/glog/logging.h
+CMakeFiles/udp_client.dir/main.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_client.dir/main.cpp.o: ./proto_message/message.pb.h
 CMakeFiles/udp_client.dir/main.cpp.o: bit_order.h
 CMakeFiles/udp_client.dir/main.cpp.o: main.cpp

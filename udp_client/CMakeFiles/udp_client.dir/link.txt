@@ -1,1 +1,1 @@
-/usr/bin/c++    -std=c++11 -O0 -Wall -g -D_GNU_SOURCE -fPIC    CMakeFiles/udp_client.dir/main.cpp.o  -o udp_client  -L./lib -rdynamic -lenet -lprotobuf lib/libmessage_lib.a -Wl,-rpath,./lib 
+/usr/bin/c++    -std=c++11 -O0 -Wall -g -D_GNU_SOURCE -fPIC    CMakeFiles/udp_client.dir/main.cpp.o  -o udp_client  -L./lib -rdynamic -lenet -lprotobuf lib/libmessage_lib.a -lgflags -lglog -Wl,-rpath,./lib 

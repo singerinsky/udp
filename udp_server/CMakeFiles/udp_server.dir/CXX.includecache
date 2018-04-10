@@ -164,10 +164,6 @@ system_util.h
 message_process.h
 /home/gl/git/udp/udp_server/message_process.h
 
-/home/gl/git/udp/udp_server/message_process.cpp
-message_process.h
-/home/gl/git/udp/udp_server/message_process.h
-
 /home/gl/git/udp/udp_server/message_process.h
 serverpch.h
 /home/gl/git/udp/udp_server/serverpch.h
@@ -297,6 +293,14 @@ time_util.h
 /home/gl/git/udp/udp_server/time_util.h
 singleton.h
 /home/gl/git/udp/udp_server/singleton.h
+
+/home/gl/git/udp/udp_server/udpserver.cpp
+udpserver.h
+/home/gl/git/udp/udp_server/udpserver.h
+netrequestmgr.h
+/home/gl/git/udp/udp_server/netrequestmgr.h
+serverpch.h
+/home/gl/git/udp/udp_server/serverpch.h
 
 /home/gl/git/udp/udp_server/udpserver.h
 serverpch.h

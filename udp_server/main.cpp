@@ -27,6 +27,7 @@ void process_event()
                 SoccerPlayerInfoRequest request;
                 std::string name = request.GetTypeName();
                 LOG(INFO)<<name;
+                CCharacterMgr::Instance()->
             }
             break;
         case eConnectFail:
@@ -83,7 +84,7 @@ int main(int argc, char** argv){
         //netrequestmgr::Instance()->pop_event();
         timer_manager::Instance()->run_until_now();
         process_event();
-        usleep(10); 
+        usleep(50); 
         //net_request_mgr::Instance()->dump_statis();
     }
     timer_manager::DestoryInstance();
