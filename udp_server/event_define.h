@@ -1,6 +1,11 @@
 #ifndef _EVENT_DEFINE_H_
 #define _EVENT_DEFINE_H_
 
+struct stMsgHead{
+    int uMsgType;
+    int uMsgLen;
+};
+
 enum eInEventType{
     eNone = 0,
     eConnect,

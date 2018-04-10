@@ -33,7 +33,7 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 			0      /* assume any amount of outgoing bandwidth */);
 	if (m_pServer == NULL)
 	{
-        printf("start udpserver failed!\n");
+        LOG(INFO)<<"start udpserver failed!\n";
 		return false;
 	}
     LOG(INFO)<<"start udpserver successed!\n";
@@ -44,12 +44,9 @@ bool udp_server::loop(){
 	    /* Wait up to 1000 milliseconds for an event. */
         ENetEvent *event = new ENetEvent();
 	    while(m_bRun){
-            net_request_mgr::Instance()->process_out_event(1);
-            uint32_t loopCount = 0;
-	        while ((loopCount++ < 300)
-                    &&(enet_host_service (m_pServer, event, 0) > 0))
+            net_request_mgr::Instance()->process_out_event(300);
+	        while ((enet_host_service (m_pServer, event, 50) > 0))
 	        {
-                LOG(INFO)<<"in loop"<<loopCount;
 	            switch (event->type)
 	            {
 	                case ENET_EVENT_TYPE_CONNECT:
@@ -59,14 +56,11 @@ bool udp_server::loop(){
                         net_request_mgr::Instance()->push_conn_event(event->peer->connectID,
                                 event->peer->address.host,
                                 event->peer->address.port);
-	                    printf ("A new client connected from %s:%u.\n",
-                                ip_str,
-	                            event->peer -> address.port);
+	                    LOG(INFO)<<"New Connection  reach!"; 
 	                    break;
 	                case ENET_EVENT_TYPE_RECEIVE:
                         net_request_mgr::Instance()->push_recv_event(event->peer->connectID,
-                                (char*)event->packet->data,
-                                event->packet->dataLength
+                                (char*)event->packet->data, event->packet->dataLength
                                 );
 	                    enet_packet_destroy (event->packet);
 	                    break;
@@ -85,7 +79,6 @@ bool udp_server::loop(){
                 //check event,valid event should push list
                 //TODO 
 	        }
-            usleep(10);
 	    }
         delete event;
         return true;

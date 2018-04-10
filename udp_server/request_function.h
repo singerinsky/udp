@@ -10,4 +10,6 @@
 
 void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID);
 
+void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID);
+
 #endif

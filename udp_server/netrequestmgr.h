@@ -25,7 +25,7 @@ class net_request_mgr{
         void        push_disconnect_outevent(e_uint32 uConnID);
         void        push_send_outevent(e_uint32,char*,e_uint32);
         void        dump_statis(){
-            printf("%d:%d\n",_statis.uRecvCount,_statis.uProcessCount); 
+        //    printf("%d:%d\n",_statis.uRecvCount,_statis.uProcessCount); 
         }
 
     private:

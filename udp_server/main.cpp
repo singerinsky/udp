@@ -23,11 +23,13 @@ void process_event()
             {
                 ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
                 printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
+                //set time out
+                enet_peer_timeout(peer,500,1000,1000);
                 //net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
                 SoccerPlayerInfoRequest request;
                 std::string name = request.GetTypeName();
                 LOG(INFO)<<name;
-                CCharacterMgr::Instance()->
+                //CCharacterMgr::Instance()->
             }
             break;
         case eConnectFail:
@@ -76,12 +78,12 @@ int main(int argc, char** argv){
     udp_server::CreateInstance();
     //new thread process receive message!
     udp_server* pServer = udp_server::Instance();//udp_server::Instance();
-    pServer->init("0.0.0.0",1234,1000);
+    pServer->init("0.0.0.0",1234,2000);
     pServer->create();
     CCharacterMgr mgr;
     bool bRun = true;
+    int t = time(NULL);
     while(bRun){
-        //netrequestmgr::Instance()->pop_event();
         timer_manager::Instance()->run_until_now();
         process_event();
         usleep(50); 

@@ -66,7 +66,11 @@ void    net_request_mgr::push_send_outevent(e_uint32 uConnID,char* pData,e_uint3
 
 void net_request_mgr::process_out_event(e_uint32 process_num)
 {
+    int uCount = 0;
     while(true){
+        uCount++;
+        if(uCount >= process_num)
+            return;
         stOutEvent* pevent = _net_out_queue.dequeue();
         if(pevent == NULL){
             return;

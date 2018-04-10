@@ -32,15 +32,17 @@ class message_process
     public:
         int parse_message(stInEvent* pEvent, char* pData, e_uint32 nLen) 
         {
-            assert(nLen > 2*sizeof(e_uint32));
+            assert(nLen > sizeof(stMsgHead));
             e_uint32 uMessageType = 0,uMessageLen;
-            memcpy(&uMessageType,pData,sizeof(e_uint32));
-            memcpy(&uMessageLen,pData+4,sizeof(e_uint32));
-            uMessageType = ntoh_int32(uMessageType);
-            membuf buf(pData+8,nLen);
+            stMsgHead head;
+            memcpy(&head,pData,sizeof(stMsgHead));
+
+            uMessageType = ntoh_int32(head.uMsgType);
+            membuf buf(pData+sizeof(stMsgHead),nLen);
             istream istr(&buf);
             switch(uMessageType){
                 MESSAGE_DISPATCH(MSG_HEART_BEAT,ClientHeartBeatRequest ) 
+                MESSAGE_DISPATCH(MSG_CLIENT_LOGIN,ClientLoginRequest) 
             
                 default:
                 {
@@ -49,9 +51,9 @@ class message_process
                 }
             }
             return 1;
-            //google::protobuf::Message message;//  = new google::protobuf::Message();
-            //message.ParseFromIstream(&istr);
         };
+
+        int compress_message(){};
 };
 
 #endif
