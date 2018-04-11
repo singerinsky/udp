@@ -36,12 +36,12 @@ void process_event()
             break;
         case eRecv:
             {
-                int ret = message_process::Instance()->parse_message(pevent,
+                int ret = message_process::Instance()->parse_recv_message(pevent,
                         pevent->stUn.recvEvt.pData,
                         pevent->stUn.recvEvt.dwLen);
 
                 if(pevent->stUn.recvEvt.pData != NULL){
-                    delete pevent->stUn.recvEvt.pData; 
+                    delete[] pevent->stUn.recvEvt.pData; 
                 }
                 break;
             }

@@ -127,8 +127,11 @@ CMakeFiles/udp_server.dir/message_process.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: ./proto_message/message.pb.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: bit_order.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: event_define.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: lock.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.cpp
 CMakeFiles/udp_server.dir/message_process.cpp.o: message_process.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: netrequestmgr.h
+CMakeFiles/udp_server.dir/message_process.cpp.o: queue.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: request_function.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: serverpch.h
 CMakeFiles/udp_server.dir/message_process.cpp.o: singleton.h
@@ -166,7 +169,12 @@ CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/log_severity.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/logging.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: ./include/glog/vlog_is_on.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: ./proto_message/message.pb.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: bit_order.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: event_define.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: lock.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: message_process.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: netrequestmgr.h
+CMakeFiles/udp_server.dir/request_function.cpp.o: queue.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: request_function.cpp
 CMakeFiles/udp_server.dir/request_function.cpp.o: request_function.h
 CMakeFiles/udp_server.dir/request_function.cpp.o: serverpch.h

@@ -128,8 +128,11 @@ CMakeFiles/udp_server.dir/message_process.cpp.o
  ./proto_message/message.pb.h
  /home/gl/git/udp/udp_server/bit_order.h
  /home/gl/git/udp/udp_server/event_define.h
+ /home/gl/git/udp/udp_server/lock.h
  /home/gl/git/udp/udp_server/message_process.cpp
  /home/gl/git/udp/udp_server/message_process.h
+ /home/gl/git/udp/udp_server/netrequestmgr.h
+ /home/gl/git/udp/udp_server/queue.h
  /home/gl/git/udp/udp_server/request_function.h
  /home/gl/git/udp/udp_server/serverpch.h
  /home/gl/git/udp/udp_server/singleton.h
@@ -167,7 +170,12 @@ CMakeFiles/udp_server.dir/request_function.cpp.o
  ./include/glog/logging.h
  ./include/glog/vlog_is_on.h
  ./proto_message/message.pb.h
+ /home/gl/git/udp/udp_server/bit_order.h
  /home/gl/git/udp/udp_server/event_define.h
+ /home/gl/git/udp/udp_server/lock.h
+ /home/gl/git/udp/udp_server/message_process.h
+ /home/gl/git/udp/udp_server/netrequestmgr.h
+ /home/gl/git/udp/udp_server/queue.h
  /home/gl/git/udp/udp_server/request_function.cpp
  /home/gl/git/udp/udp_server/request_function.h
  /home/gl/git/udp/udp_server/serverpch.h

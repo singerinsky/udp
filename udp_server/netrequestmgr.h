@@ -21,6 +21,7 @@ class net_request_mgr{
         void        push_conn_event(e_uint32 uConnID,e_uint32 uRemoteIP,e_uint32 uRemotePort);
         void        push_disconn_event(e_uint32 uConnID,e_uint32 strRemoteIP,e_uint32 uRemotePort);
         stInEvent*  pop_in_event(); 
+
         void        process_out_event(e_uint32 process_num);
         void        push_disconnect_outevent(e_uint32 uConnID);
         void        push_send_outevent(e_uint32,char*,e_uint32);

@@ -8,6 +8,7 @@
 #include "bit_order.h"
 #include "event_define.h"
 #include "request_function.h"
+#include "netrequestmgr.h"
 
 struct membuf:std::streambuf
 {
@@ -30,7 +31,7 @@ class message_process
 {
     DECLARE_SINGLETON(message_process);
     public:
-        int parse_message(stInEvent* pEvent, char* pData, e_uint32 nLen) 
+        int parse_recv_message(stInEvent* pEvent, char* pData, e_uint32 nLen) 
         {
             assert(nLen > sizeof(stMsgHead));
             e_uint32 uMessageType = 0,uMessageLen;
@@ -53,7 +54,24 @@ class message_process
             return 1;
         };
 
-        int compress_message(){};
+        int compress_send_message(e_uint32 uConnID, google::protobuf::Message* pMessage,int uMessageType){
+            assert(uConnID != 0);
+            int uMessageLen = pMessage->ByteSize() + sizeof(stMsgHead); 
+            char*   buff = new char[uMessageLen]; 
+            stMsgHead head;
+            head.uMsgType = uMessageType;
+            head.uMsgLen = uMessageLen;
+            memcpy(buff,&head,sizeof(head));
+
+            bool rst = pMessage->SerializeToArray(buff+sizeof(stMsgHead),uMessageLen - sizeof(stMsgHead) );
+            if(rst == false){
+                LOG(ERROR)<<" Compress message failed!"; 
+                return -1;
+            }
+            LOG(INFO)<<"add message to queue!";
+            net_request_mgr::Instance()->push_send_outevent(uConnID,buff,uMessageLen);
+            return 1;
+        };
 };
 
 #endif

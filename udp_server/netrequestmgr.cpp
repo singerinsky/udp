@@ -102,11 +102,13 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
                     {
                         LOG(ERROR)<<"error of send data,failed find peer!\n"; 
                     }
+                    delete[] pevent->stUn.sendOutEvt.pData;
                 }
                 break;
             default:
                 assert(false);
         }
+        delete pevent;
     }
 
 }
