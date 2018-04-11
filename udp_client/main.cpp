@@ -43,7 +43,7 @@ bool create_client(){
         enet_peer_timeout(peer,1000,1000,1000);
         int count = 0;
         while(true){
-            enet_host_service(client,&event,10);
+            enet_host_service(client,&event,100);
             if(event.type == ENET_EVENT_TYPE_DISCONNECT){
                 LOG(INFO)<<"server out service!";
                 enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
@@ -56,36 +56,7 @@ bool create_client(){
                 loginRequest.set_player_id(count);
                 loginRequest.set_player_pwd("nice");
                 loginRequest.set_md5_code("nniceniceniceniceniceniceniceniceniceniceniceniceniceniceice\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\
-                        pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppe");
+                       pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppe");
                 send_message_reliable(peer,&loginRequest,MSG_CLIENT_LOGIN);
                 ClientHeartBeatRequest request;
                 request.set_client_time(count);
