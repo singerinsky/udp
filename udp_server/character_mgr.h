@@ -21,9 +21,33 @@ class CCharacterMgr
             timer_manager::Instance()->add_timer(&_timer);
         }
 
-        CPlayer* AddPlayer(e_uint32 dwConnID){
-             
+        void MapConn(e_uint32 dwConnID,e_uint32 dwPlayerId){
+            auto itr = _conn_map.find(dwPlayerId); 
+            if(itr != _conn_map.end()){
+                _conn_map[dwPlayerId] = dwConnID; 
+            }else{
+                LOG(INFO)<<"New Connection";
+                _conn_map[dwPlayerId] = dwConnID; 
+            }
         }
+
+        CPlayer* AddPlayer(e_uint32 dwPlayerId ,CPlayer* pPlayer){
+            auto itr = _player_map.find(dwPlayerId); 
+            if(itr != _player_map.end()){
+                return itr->second; 
+            }
+            _player_map[dwPlayerId] = pPlayer;
+            return pPlayer;
+        }
+
+        CPlayer* GetPlayer(e_uint32 dwPlayerId){
+            auto itr = _player_map.find(dwPlayerId);
+            if( itr == _player_map.end()){
+                return NULL; 
+            }
+            return itr->second;
+        }
+
     private:
         e_uint32                                                    _start_id;
         template_timer<CCharacterMgr,&CCharacterMgr::_on_timeout>   _timer;

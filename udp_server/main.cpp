@@ -11,46 +11,48 @@
 #include "message_process.h"
 
 
-void process_event()
+void process_event(e_uint32 uMaxProcessNum)
 {
-   stInEvent* pevent =  net_request_mgr::Instance()->pop_in_event();
-   if(pevent == NULL){
-        return; 
-   }
-   switch(pevent->nType)
-   {
-        case eConnect:
-            {
-                ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
-                printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
-                //set time out
-                enet_peer_timeout(peer,500,1000,1000);
-                //net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
-                SoccerPlayerInfoRequest request;
-                std::string name = request.GetTypeName();
-                LOG(INFO)<<name;
-                //CCharacterMgr::Instance()->
-            }
-            break;
-        case eConnectFail:
-            break;
-        case eRecv:
-            {
-                int ret = message_process::Instance()->parse_recv_message(pevent,
-                        pevent->stUn.recvEvt.pData,
-                        pevent->stUn.recvEvt.dwLen);
-
-                if(pevent->stUn.recvEvt.pData != NULL){
-                    delete[] pevent->stUn.recvEvt.pData; 
+    e_uint32 count = 0;
+    while(uMaxProcessNum >= count++){
+        stInEvent* pevent =  net_request_mgr::Instance()->pop_in_event();
+        if(pevent == NULL){
+            return; 
+        }
+        switch(pevent->nType)
+        {
+            case eConnect:
+                {
+                    ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
+                    printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
+                    //set time out
+                    enet_peer_timeout(peer,500,1000,1000);
+                    //net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
+                    SoccerPlayerInfoRequest request;
+                    std::string name = request.GetTypeName();
+                    LOG(INFO)<<name;
                 }
                 break;
-            }
-        case eDisConnect:
-            break;
-        case eNone:
-            break;
-   }
-   delete pevent;
+            case eConnectFail:
+                break;
+            case eRecv:
+                {
+                    int ret = message_process::Instance()->parse_recv_message(pevent,
+                            pevent->stUn.recvEvt.pData,
+                            pevent->stUn.recvEvt.dwLen);
+                    if(pevent->stUn.recvEvt.pData != NULL){
+                        delete[] pevent->stUn.recvEvt.pData; 
+                    }
+                    break;
+                }
+            case eDisConnect:
+                break;
+            case eNone:
+                break;
+        }
+        delete pevent;
+    }
+    return;
 }
 
 DEFINE_bool(daemon,false,"run in daemon");
@@ -85,11 +87,12 @@ int main(int argc, char** argv){
     int t = time(NULL);
     while(bRun){
         timer_manager::Instance()->run_until_now();
-        process_event();
+        process_event(200);
         usleep(50); 
         //net_request_mgr::Instance()->dump_statis();
     }
     timer_manager::DestoryInstance();
+    udp_server::DestoryInstance();
     net_request_mgr::DestoryInstance();
 
     atexit(enet_deinitialize);

@@ -41,12 +41,14 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 }
 
 bool udp_server::loop(){
-	    /* Wait up to 1000 milliseconds for an event. */
         ENetEvent *event = new ENetEvent();
 	    while(m_bRun){
             net_request_mgr::Instance()->process_out_event(300);
-	        while ((enet_host_service (m_pServer, event, 50) > 0))
+            e_uint32 count = 0;
+	        while ((enet_host_service (m_pServer, event, 5) > 0))
 	        {
+                if(count++ > 200)
+                    break;
 	            switch (event->type)
 	            {
 	                case ENET_EVENT_TYPE_CONNECT:

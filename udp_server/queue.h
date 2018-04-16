@@ -60,8 +60,8 @@ class ConcurrenceQueue
     }
 
     private:
-    ConcurrenceQueueNode *_head;
-    ConcurrenceQueueNode *_tail;
+    ConcurrenceQueueNode* volatile _head;
+    ConcurrenceQueueNode* volatile _tail;
 };
 
 

@@ -11,15 +11,14 @@ void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID
     LOG(INFO)<<"Client HeartBeat! Current time :"<<request.client_time();
     ClientHeartBeatRequest response;
     response.set_client_time(request.client_time());
-    message_process::Instance()->compress_send_message(dwConnID,&response,MSG_HEART_BEAT);
+    SEND_MSG(dwConnID,response,MSG_HEART_BEAT);
 }
 
 void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID)
 {
-    LOG(INFO)<<"Client HeartBeat! Current time :"<<request.md5_code().length();
+    LOG(INFO)<<"Client HeartBeat! Current time :"<<request.player_id();
     ClientHeartBeatRequest response;
     response.set_client_time(1);
-    message_process::Instance()->compress_send_message(dwConnID,&response,MSG_HEART_BEAT);
-
+    SEND_MSG(dwConnID,response,MSG_HEART_BEAT);
 }
 

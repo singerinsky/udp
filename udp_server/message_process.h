@@ -74,4 +74,5 @@ class message_process
         };
 };
 
+#define SEND_MSG(dwConnId,oMessage,uMessageType) message_process::Instance()->compress_send_message(dwConnID,&oMessage,uMessageType);
 #endif
