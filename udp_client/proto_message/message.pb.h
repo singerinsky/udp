@@ -37,7 +37,7 @@ class SoccerPlayerInfoResponse;
 class ClientHeartBeatRequest;
 class ClientHeartBeatResponse;
 class ClientLoginRequest;
-class ClientLoginResponse;
+class ClientLoginAck;
 class GateServerRegisterRequest;
 class GateServerRegisterResponse;
 class DataCommonUpdateNtf;
@@ -66,8 +66,9 @@ enum MessageType {
   MSG_SOCCER_PLAYER_INFO = 1,
   MSG_HEART_BEAT = 2,
   MSG_CLIENT_LOGIN = 3,
-  MSG_GATE_SERVER_REGISTER = 4,
-  MSG_DB_COMMON_UPDATE = 5
+  MSG_CLIENT_LOGIN_ACK = 4,
+  MSG_GATE_SERVER_REGISTER = 5,
+  MSG_DB_COMMON_UPDATE = 6
 };
 bool MessageType_IsValid(int value);
 const MessageType MessageType_MIN = MSG_SOCCER_PLAYER_INFO;
@@ -551,14 +552,14 @@ class ClientLoginRequest : public ::google::protobuf::Message {
 };
 // -------------------------------------------------------------------
 
-class ClientLoginResponse : public ::google::protobuf::Message {
+class ClientLoginAck : public ::google::protobuf::Message {
  public:
-  ClientLoginResponse();
-  virtual ~ClientLoginResponse();
+  ClientLoginAck();
+  virtual ~ClientLoginAck();
 
-  ClientLoginResponse(const ClientLoginResponse& from);
+  ClientLoginAck(const ClientLoginAck& from);
 
-  inline ClientLoginResponse& operator=(const ClientLoginResponse& from) {
+  inline ClientLoginAck& operator=(const ClientLoginAck& from) {
     CopyFrom(from);
     return *this;
   }
@@ -572,17 +573,17 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ClientLoginResponse& default_instance();
+  static const ClientLoginAck& default_instance();
 
-  void Swap(ClientLoginResponse* other);
+  void Swap(ClientLoginAck* other);
 
   // implements Message ----------------------------------------------
 
-  ClientLoginResponse* New() const;
+  ClientLoginAck* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ClientLoginResponse& from);
-  void MergeFrom(const ClientLoginResponse& from);
+  void CopyFrom(const ClientLoginAck& from);
+  void MergeFrom(const ClientLoginAck& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -631,7 +632,7 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   inline ::std::string* release_player_name();
   inline void set_allocated_player_name(::std::string* player_name);
 
-  // @@protoc_insertion_point(class_scope:ClientLoginResponse)
+  // @@protoc_insertion_point(class_scope:ClientLoginAck)
  private:
   inline void set_has_ret();
   inline void clear_has_ret();
@@ -654,7 +655,7 @@ class ClientLoginResponse : public ::google::protobuf::Message {
   friend void protobuf_ShutdownFile_message_2eproto();
 
   void InitAsDefaultInstance();
-  static ClientLoginResponse* default_instance_;
+  static ClientLoginAck* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -1284,100 +1285,100 @@ inline void ClientLoginRequest::set_allocated_md5_code(::std::string* md5_code) 
 
 // -------------------------------------------------------------------
 
-// ClientLoginResponse
+// ClientLoginAck
 
 // required int32 ret = 1;
-inline bool ClientLoginResponse::has_ret() const {
+inline bool ClientLoginAck::has_ret() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ClientLoginResponse::set_has_ret() {
+inline void ClientLoginAck::set_has_ret() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void ClientLoginResponse::clear_has_ret() {
+inline void ClientLoginAck::clear_has_ret() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void ClientLoginResponse::clear_ret() {
+inline void ClientLoginAck::clear_ret() {
   ret_ = 0;
   clear_has_ret();
 }
-inline ::google::protobuf::int32 ClientLoginResponse::ret() const {
+inline ::google::protobuf::int32 ClientLoginAck::ret() const {
   return ret_;
 }
-inline void ClientLoginResponse::set_ret(::google::protobuf::int32 value) {
+inline void ClientLoginAck::set_ret(::google::protobuf::int32 value) {
   set_has_ret();
   ret_ = value;
 }
 
 // optional int32 player_id = 2;
-inline bool ClientLoginResponse::has_player_id() const {
+inline bool ClientLoginAck::has_player_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ClientLoginResponse::set_has_player_id() {
+inline void ClientLoginAck::set_has_player_id() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ClientLoginResponse::clear_has_player_id() {
+inline void ClientLoginAck::clear_has_player_id() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void ClientLoginResponse::clear_player_id() {
+inline void ClientLoginAck::clear_player_id() {
   player_id_ = 0;
   clear_has_player_id();
 }
-inline ::google::protobuf::int32 ClientLoginResponse::player_id() const {
+inline ::google::protobuf::int32 ClientLoginAck::player_id() const {
   return player_id_;
 }
-inline void ClientLoginResponse::set_player_id(::google::protobuf::int32 value) {
+inline void ClientLoginAck::set_player_id(::google::protobuf::int32 value) {
   set_has_player_id();
   player_id_ = value;
 }
 
 // optional string player_name = 3;
-inline bool ClientLoginResponse::has_player_name() const {
+inline bool ClientLoginAck::has_player_name() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ClientLoginResponse::set_has_player_name() {
+inline void ClientLoginAck::set_has_player_name() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void ClientLoginResponse::clear_has_player_name() {
+inline void ClientLoginAck::clear_has_player_name() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void ClientLoginResponse::clear_player_name() {
+inline void ClientLoginAck::clear_player_name() {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     player_name_->clear();
   }
   clear_has_player_name();
 }
-inline const ::std::string& ClientLoginResponse::player_name() const {
+inline const ::std::string& ClientLoginAck::player_name() const {
   return *player_name_;
 }
-inline void ClientLoginResponse::set_player_name(const ::std::string& value) {
+inline void ClientLoginAck::set_player_name(const ::std::string& value) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(value);
 }
-inline void ClientLoginResponse::set_player_name(const char* value) {
+inline void ClientLoginAck::set_player_name(const char* value) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(value);
 }
-inline void ClientLoginResponse::set_player_name(const char* value, size_t size) {
+inline void ClientLoginAck::set_player_name(const char* value, size_t size) {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   player_name_->assign(reinterpret_cast<const char*>(value), size);
 }
-inline ::std::string* ClientLoginResponse::mutable_player_name() {
+inline ::std::string* ClientLoginAck::mutable_player_name() {
   set_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     player_name_ = new ::std::string;
   }
   return player_name_;
 }
-inline ::std::string* ClientLoginResponse::release_player_name() {
+inline ::std::string* ClientLoginAck::release_player_name() {
   clear_has_player_name();
   if (player_name_ == &::google::protobuf::internal::kEmptyString) {
     return NULL;
@@ -1387,7 +1388,7 @@ inline ::std::string* ClientLoginResponse::release_player_name() {
     return temp;
   }
 }
-inline void ClientLoginResponse::set_allocated_player_name(::std::string* player_name) {
+inline void ClientLoginAck::set_allocated_player_name(::std::string* player_name) {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     delete player_name_;
   }

@@ -33,9 +33,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* ClientLoginRequest_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ClientLoginRequest_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ClientLoginResponse_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* ClientLoginAck_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  ClientLoginResponse_reflection_ = NULL;
+  ClientLoginAck_reflection_ = NULL;
 const ::google::protobuf::Descriptor* GateServerRegisterRequest_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   GateServerRegisterRequest_reflection_ = NULL;
@@ -136,23 +136,23 @@ void protobuf_AssignDesc_message_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(ClientLoginRequest));
-  ClientLoginResponse_descriptor_ = file->message_type(5);
-  static const int ClientLoginResponse_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, ret_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, player_name_),
+  ClientLoginAck_descriptor_ = file->message_type(5);
+  static const int ClientLoginAck_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginAck, ret_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginAck, player_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginAck, player_name_),
   };
-  ClientLoginResponse_reflection_ =
+  ClientLoginAck_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      ClientLoginResponse_descriptor_,
-      ClientLoginResponse::default_instance_,
-      ClientLoginResponse_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginResponse, _unknown_fields_),
+      ClientLoginAck_descriptor_,
+      ClientLoginAck::default_instance_,
+      ClientLoginAck_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginAck, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ClientLoginAck, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ClientLoginResponse));
+      sizeof(ClientLoginAck));
   GateServerRegisterRequest_descriptor_ = file->message_type(6);
   static const int GateServerRegisterRequest_offsets_[1] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(GateServerRegisterRequest, server_index_),
@@ -224,7 +224,7 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ClientLoginRequest_descriptor_, &ClientLoginRequest::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ClientLoginResponse_descriptor_, &ClientLoginResponse::default_instance());
+    ClientLoginAck_descriptor_, &ClientLoginAck::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     GateServerRegisterRequest_descriptor_, &GateServerRegisterRequest::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
@@ -246,8 +246,8 @@ void protobuf_ShutdownFile_message_2eproto() {
   delete ClientHeartBeatResponse_reflection_;
   delete ClientLoginRequest::default_instance_;
   delete ClientLoginRequest_reflection_;
-  delete ClientLoginResponse::default_instance_;
-  delete ClientLoginResponse_reflection_;
+  delete ClientLoginAck::default_instance_;
+  delete ClientLoginAck_reflection_;
   delete GateServerRegisterRequest::default_instance_;
   delete GateServerRegisterRequest_reflection_;
   delete GateServerRegisterResponse::default_instance_;
@@ -270,18 +270,19 @@ void protobuf_AddDesc_message_2eproto() {
     "tRequest\022\023\n\013client_time\030\001 \002(\005\".\n\027ClientH"
     "eartBeatResponse\022\023\n\013server_time\030\001 \002(\005\"M\n"
     "\022ClientLoginRequest\022\021\n\tplayer_id\030\001 \002(\005\022\022"
-    "\n\nplayer_pwd\030\002 \002(\t\022\020\n\010md5_code\030\003 \002(\t\"J\n\023"
-    "ClientLoginResponse\022\013\n\003ret\030\001 \002(\005\022\021\n\tplay"
-    "er_id\030\002 \001(\005\022\023\n\013player_name\030\003 \001(\t\"1\n\031Gate"
-    "ServerRegisterRequest\022\024\n\014server_index\030\001 "
-    "\002(\005\")\n\032GateServerRegisterResponse\022\013\n\003ret"
-    "\030\001 \002(\005\"3\n\023DataCommonUpdateNtf\022\013\n\003key\030\001 \002"
-    "(\005\022\017\n\007sql_str\030\002 \002(\t*D\n\017MSG_ACTION_TYPE\022\017"
-    "\n\013MSG_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG"
-    "_NOTIFY\020\002*\213\001\n\013MessageType\022\032\n\026MSG_SOCCER_"
-    "PLAYER_INFO\020\001\022\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG"
-    "_CLIENT_LOGIN\020\003\022\034\n\030MSG_GATE_SERVER_REGIS"
-    "TER\020\004\022\030\n\024MSG_DB_COMMON_UPDATE\020\005", 751);
+    "\n\nplayer_pwd\030\002 \002(\t\022\020\n\010md5_code\030\003 \002(\t\"E\n\016"
+    "ClientLoginAck\022\013\n\003ret\030\001 \002(\005\022\021\n\tplayer_id"
+    "\030\002 \001(\005\022\023\n\013player_name\030\003 \001(\t\"1\n\031GateServe"
+    "rRegisterRequest\022\024\n\014server_index\030\001 \002(\005\")"
+    "\n\032GateServerRegisterResponse\022\013\n\003ret\030\001 \002("
+    "\005\"3\n\023DataCommonUpdateNtf\022\013\n\003key\030\001 \002(\005\022\017\n"
+    "\007sql_str\030\002 \002(\t*D\n\017MSG_ACTION_TYPE\022\017\n\013MSG"
+    "_REQUEST\020\000\022\020\n\014MSG_RESPONSE\020\001\022\016\n\nMSG_NOTI"
+    "FY\020\002*\245\001\n\013MessageType\022\032\n\026MSG_SOCCER_PLAYE"
+    "R_INFO\020\001\022\022\n\016MSG_HEART_BEAT\020\002\022\024\n\020MSG_CLIE"
+    "NT_LOGIN\020\003\022\030\n\024MSG_CLIENT_LOGIN_ACK\020\004\022\034\n\030"
+    "MSG_GATE_SERVER_REGISTER\020\005\022\030\n\024MSG_DB_COM"
+    "MON_UPDATE\020\006", 772);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "message.proto", &protobuf_RegisterTypes);
   SoccerPlayerInfoRequest::default_instance_ = new SoccerPlayerInfoRequest();
@@ -289,7 +290,7 @@ void protobuf_AddDesc_message_2eproto() {
   ClientHeartBeatRequest::default_instance_ = new ClientHeartBeatRequest();
   ClientHeartBeatResponse::default_instance_ = new ClientHeartBeatResponse();
   ClientLoginRequest::default_instance_ = new ClientLoginRequest();
-  ClientLoginResponse::default_instance_ = new ClientLoginResponse();
+  ClientLoginAck::default_instance_ = new ClientLoginAck();
   GateServerRegisterRequest::default_instance_ = new GateServerRegisterRequest();
   GateServerRegisterResponse::default_instance_ = new GateServerRegisterResponse();
   DataCommonUpdateNtf::default_instance_ = new DataCommonUpdateNtf();
@@ -298,7 +299,7 @@ void protobuf_AddDesc_message_2eproto() {
   ClientHeartBeatRequest::default_instance_->InitAsDefaultInstance();
   ClientHeartBeatResponse::default_instance_->InitAsDefaultInstance();
   ClientLoginRequest::default_instance_->InitAsDefaultInstance();
-  ClientLoginResponse::default_instance_->InitAsDefaultInstance();
+  ClientLoginAck::default_instance_->InitAsDefaultInstance();
   GateServerRegisterRequest::default_instance_->InitAsDefaultInstance();
   GateServerRegisterResponse::default_instance_->InitAsDefaultInstance();
   DataCommonUpdateNtf::default_instance_->InitAsDefaultInstance();
@@ -337,6 +338,7 @@ bool MessageType_IsValid(int value) {
     case 3:
     case 4:
     case 5:
+    case 6:
       return true;
     default:
       return false;
@@ -1603,26 +1605,26 @@ void ClientLoginRequest::Swap(ClientLoginRequest* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int ClientLoginResponse::kRetFieldNumber;
-const int ClientLoginResponse::kPlayerIdFieldNumber;
-const int ClientLoginResponse::kPlayerNameFieldNumber;
+const int ClientLoginAck::kRetFieldNumber;
+const int ClientLoginAck::kPlayerIdFieldNumber;
+const int ClientLoginAck::kPlayerNameFieldNumber;
 #endif  // !_MSC_VER
 
-ClientLoginResponse::ClientLoginResponse()
+ClientLoginAck::ClientLoginAck()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void ClientLoginResponse::InitAsDefaultInstance() {
+void ClientLoginAck::InitAsDefaultInstance() {
 }
 
-ClientLoginResponse::ClientLoginResponse(const ClientLoginResponse& from)
+ClientLoginAck::ClientLoginAck(const ClientLoginAck& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void ClientLoginResponse::SharedCtor() {
+void ClientLoginAck::SharedCtor() {
   _cached_size_ = 0;
   ret_ = 0;
   player_id_ = 0;
@@ -1630,11 +1632,11 @@ void ClientLoginResponse::SharedCtor() {
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ClientLoginResponse::~ClientLoginResponse() {
+ClientLoginAck::~ClientLoginAck() {
   SharedDtor();
 }
 
-void ClientLoginResponse::SharedDtor() {
+void ClientLoginAck::SharedDtor() {
   if (player_name_ != &::google::protobuf::internal::kEmptyString) {
     delete player_name_;
   }
@@ -1642,28 +1644,28 @@ void ClientLoginResponse::SharedDtor() {
   }
 }
 
-void ClientLoginResponse::SetCachedSize(int size) const {
+void ClientLoginAck::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ClientLoginResponse::descriptor() {
+const ::google::protobuf::Descriptor* ClientLoginAck::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return ClientLoginResponse_descriptor_;
+  return ClientLoginAck_descriptor_;
 }
 
-const ClientLoginResponse& ClientLoginResponse::default_instance() {
+const ClientLoginAck& ClientLoginAck::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_message_2eproto();
   return *default_instance_;
 }
 
-ClientLoginResponse* ClientLoginResponse::default_instance_ = NULL;
+ClientLoginAck* ClientLoginAck::default_instance_ = NULL;
 
-ClientLoginResponse* ClientLoginResponse::New() const {
-  return new ClientLoginResponse;
+ClientLoginAck* ClientLoginAck::New() const {
+  return new ClientLoginAck;
 }
 
-void ClientLoginResponse::Clear() {
+void ClientLoginAck::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     ret_ = 0;
     player_id_ = 0;
@@ -1677,7 +1679,7 @@ void ClientLoginResponse::Clear() {
   mutable_unknown_fields()->Clear();
 }
 
-bool ClientLoginResponse::MergePartialFromCodedStream(
+bool ClientLoginAck::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
@@ -1747,7 +1749,7 @@ bool ClientLoginResponse::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void ClientLoginResponse::SerializeWithCachedSizes(
+void ClientLoginAck::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // required int32 ret = 1;
   if (has_ret()) {
@@ -1774,7 +1776,7 @@ void ClientLoginResponse::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* ClientLoginResponse::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ClientLoginAck::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
   // required int32 ret = 1;
   if (has_ret()) {
@@ -1803,7 +1805,7 @@ void ClientLoginResponse::SerializeWithCachedSizes(
   return target;
 }
 
-int ClientLoginResponse::ByteSize() const {
+int ClientLoginAck::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -1840,10 +1842,10 @@ int ClientLoginResponse::ByteSize() const {
   return total_size;
 }
 
-void ClientLoginResponse::MergeFrom(const ::google::protobuf::Message& from) {
+void ClientLoginAck::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const ClientLoginResponse* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ClientLoginResponse*>(
+  const ClientLoginAck* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ClientLoginAck*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -1852,7 +1854,7 @@ void ClientLoginResponse::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void ClientLoginResponse::MergeFrom(const ClientLoginResponse& from) {
+void ClientLoginAck::MergeFrom(const ClientLoginAck& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_ret()) {
@@ -1868,25 +1870,25 @@ void ClientLoginResponse::MergeFrom(const ClientLoginResponse& from) {
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void ClientLoginResponse::CopyFrom(const ::google::protobuf::Message& from) {
+void ClientLoginAck::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void ClientLoginResponse::CopyFrom(const ClientLoginResponse& from) {
+void ClientLoginAck::CopyFrom(const ClientLoginAck& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ClientLoginResponse::IsInitialized() const {
+bool ClientLoginAck::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
 
   return true;
 }
 
-void ClientLoginResponse::Swap(ClientLoginResponse* other) {
+void ClientLoginAck::Swap(ClientLoginAck* other) {
   if (other != this) {
     std::swap(ret_, other->ret_);
     std::swap(player_id_, other->player_id_);
@@ -1897,11 +1899,11 @@ void ClientLoginResponse::Swap(ClientLoginResponse* other) {
   }
 }
 
-::google::protobuf::Metadata ClientLoginResponse::GetMetadata() const {
+::google::protobuf::Metadata ClientLoginAck::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ClientLoginResponse_descriptor_;
-  metadata.reflection = ClientLoginResponse_reflection_;
+  metadata.descriptor = ClientLoginAck_descriptor_;
+  metadata.reflection = ClientLoginAck_reflection_;
   return metadata;
 }
 

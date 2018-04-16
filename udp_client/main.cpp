@@ -43,14 +43,16 @@ bool create_client(){
         enet_peer_timeout(peer,1000,1000,1000);
         int count = 0;
         while(true){
-            enet_host_service(client,&event,100);
+            enet_host_service(client,&event,1000);
             if(event.type == ENET_EVENT_TYPE_DISCONNECT){
                 LOG(INFO)<<"server out service!";
                 enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
                 break;
             }else if(event.type == ENET_EVENT_TYPE_RECEIVE){
                 LOG(INFO)<<"receive message from server!"; 
-                enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
+                parse_recv_message((char*)event.packet->data, 
+                        event.packet->dataLength,
+                        event.peer->connectID);
             }else {
                 ClientLoginRequest loginRequest;
                 loginRequest.set_player_id(count);
@@ -62,7 +64,7 @@ bool create_client(){
                 request.set_client_time(count);
                 //send_message_reliable(peer,&request,MSG_HEART_BEAT);
                 enet_host_flush (client); //必须使用这个函数或是enet_host_service来使数据发出去
-                LOG(INFO)<<"send message!"<<count<<" length:"<<loginRequest.md5_code().length();
+                LOG(INFO)<<"send message!"<<count;
                 count++;
             }
         }
