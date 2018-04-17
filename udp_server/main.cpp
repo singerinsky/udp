@@ -61,6 +61,7 @@ void process_tcp_event(int process_num)
 
 void process_event(e_uint32 uMaxProcessNum){
     process_udp_event(uMaxProcessNum);
+
     process_tcp_event(uMaxProcessNum);
 }
 
