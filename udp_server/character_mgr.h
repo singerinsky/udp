@@ -3,11 +3,14 @@
 
 #include "timer_manager.h"
 #include <map>
+#include "serverpch.h"
+
 using namespace std;
 
 class CPlayer;
 class CCharacterMgr
 {
+    DECLARE_SINGLETON(CCharacterMgr);    
     public:
         CCharacterMgr(){
             _start_id = 0 ;

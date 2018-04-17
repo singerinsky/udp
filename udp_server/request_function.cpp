@@ -4,6 +4,9 @@
 #include <istream>
 #include "message.pb.h"
 #include "message_process.h"
+#include "udpserver.h"
+#include "player.h"
+#include "character_mgr.h"
 
 
 void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID)
@@ -16,7 +19,18 @@ void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID
 
 void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID)
 {
-    LOG(INFO)<<"Client HeartBeat! Current time :"<<request.player_id();
+
+    ENetPeer* peer = udp_server::Instance()->get_peer(dwConnID);
+    if(peer == NULL)
+        return;
+    if(peer->data == NULL){
+        CPlayer* pPlayer = new CPlayer(9999);
+        CCharacterMgr::Instance()->AddPlayer(pPlayer->GetPlayeId(),pPlayer);
+        peer->data = (void*)pPlayer;
+    }else{
+        CPlayer* pPlayer = (CPlayer*)(peer->data);
+        LOG(INFO)<<"Player has login, PlayerID:"<<pPlayer->GetPlayeId(); 
+    }
     ClientLoginAck ack;
     ack.set_player_id(9999);
     ack.set_ret(1);

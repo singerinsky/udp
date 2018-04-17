@@ -10,11 +10,6 @@
 #include "system_util.h"
 #include "message_process.h"
 
-void process_event(e_uint32 uMaxProcessNum){
-    process_udp_event(uMaxProcessNum);
-    process_tcp_event(uMaxProcessNum);
-}
-
 void process_udp_event(e_uint32 uMaxProcessNum)
 {
     e_uint32 count = 0;
@@ -63,6 +58,12 @@ void process_tcp_event(int process_num)
 {
     LOG(INFO)<<"Process tcp event!!";
 }
+
+void process_event(e_uint32 uMaxProcessNum){
+    process_udp_event(uMaxProcessNum);
+    process_tcp_event(uMaxProcessNum);
+}
+
 
 DEFINE_bool(daemon,false,"run in daemon");
 
