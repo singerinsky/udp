@@ -1,7 +1,7 @@
 #ifndef _SFL_LOCK_H_
 #define _SFL_LOCK_H_
 
-#include "serverpch.h"
+#include "head.h"
 
 class LockBase
 {

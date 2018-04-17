@@ -9,7 +9,6 @@
 #define CTHREAD_H_
 
 #include <pthread.h>
-#include "serverpch.h"
 
 typedef pthread_t THREAD_HANDLE;
 

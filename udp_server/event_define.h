@@ -1,6 +1,8 @@
 #ifndef _EVENT_DEFINE_H_
 #define _EVENT_DEFINE_H_
 
+#include "serverpch.h"
+
 struct stMsgHead{
     int uMsgType;
     int uMsgLen;
