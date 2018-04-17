@@ -82,12 +82,13 @@ int main(int argc, char** argv){
     timer_manager::CreateInstance();
     timer_manager::Instance()->init(14);
     net_request_mgr::CreateInstance();
+
+    //new thread process receive udp message!
     udp_server::CreateInstance();
-    //new thread process receive message!
     udp_server* pServer = udp_server::Instance();//udp_server::Instance();
     pServer->init("0.0.0.0",1234,2000);
     pServer->create();
-    CCharacterMgr mgr;
+
     bool bRun = true;
     int t = time(NULL);
     while(bRun){
