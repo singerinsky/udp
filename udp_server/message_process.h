@@ -59,7 +59,7 @@ class message_process
             int uMessageLen = pMessage->ByteSize() + sizeof(stMsgHead); 
             char*   buff = new char[uMessageLen]; 
             stMsgHead head;
-            head.uMsgType = uMessageType;
+            head.uMsgType = hton_int32(uMessageType);
             head.uMsgLen = uMessageLen;
             memcpy(buff,&head,sizeof(head));
 

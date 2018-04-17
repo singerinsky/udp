@@ -17,8 +17,9 @@ void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID
 void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID)
 {
     LOG(INFO)<<"Client HeartBeat! Current time :"<<request.player_id();
-    ClientHeartBeatRequest response;
-    response.set_client_time(1);
-    SEND_MSG(dwConnID,response,MSG_HEART_BEAT);
+    ClientLoginAck ack;
+    ack.set_player_id(9999);
+    ack.set_ret(1);
+    SEND_MSG(dwConnID,ack,MSG_CLIENT_LOGIN_ACK);
 }
 

@@ -12,19 +12,17 @@
 INSTANCE_SINGLETON(udp_server);
 
 udp_server::udp_server() {
-	// TODO Auto-generated constructor stub
 	m_bRun = false;
 }
 
 udp_server::~udp_server() {
-	// TODO Auto-generated destructor stub
 	enet_host_destroy(m_pServer);
 }
 
 bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 {
     enet_address_set_host (&_address, str_ip.c_str());
-	/* Bind the server to port 1234. */
+
 	_address.port = u_port;
 	m_pServer = enet_host_create (& _address /* the address to bind the server host to */,
 			u_max_online      /* allow up to 32 clients and/or outgoing connections */,

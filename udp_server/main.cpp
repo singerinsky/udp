@@ -11,7 +11,7 @@
 #include "message_process.h"
 
 
-void process_event(e_uint32 uMaxProcessNum)
+void process_udp_event(e_uint32 uMaxProcessNum)
 {
     e_uint32 count = 0;
     while(uMaxProcessNum >= count++){
@@ -55,6 +55,11 @@ void process_event(e_uint32 uMaxProcessNum)
     return;
 }
 
+void process_tcp_event(int process_num)
+{
+    LOG(INFO)<<"Process tcp event!!";
+}
+
 DEFINE_bool(daemon,false,"run in daemon");
 
 int main(int argc, char** argv){
@@ -87,9 +92,9 @@ int main(int argc, char** argv){
     int t = time(NULL);
     while(bRun){
         timer_manager::Instance()->run_until_now();
-        process_event(200);
+        process_udp_event(200);
+        process_tcp_event(200);
         usleep(50); 
-        //net_request_mgr::Instance()->dump_statis();
     }
     timer_manager::DestoryInstance();
     udp_server::DestoryInstance();

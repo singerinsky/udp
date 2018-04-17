@@ -10,9 +10,10 @@ enum MessageType
 {
     MSG_SOCCER_PLAYER_INFO = 1;
     MSG_HEART_BEAT          = 2;//心跳
-    MSG_CLIENT_LOGIN        =3;//client login
-    MSG_GATE_SERVER_REGISTER =4;//gate server register
-    MSG_DB_COMMON_UPDATE    = 5;//common update
+    MSG_CLIENT_LOGIN        = 3;//client login
+    MSG_CLIENT_LOGIN_ACK    = 4;//client login ack
+    MSG_GATE_SERVER_REGISTER = 5;//gate server register
+    MSG_DB_COMMON_UPDATE    = 6;//common update
 }
 
 message SoccerPlayerInfoRequest
@@ -44,7 +45,7 @@ message ClientLoginRequest
     required string md5_code = 3;
 }
 
-message ClientLoginResponse
+message ClientLoginAck
 {
     required int32 ret = 1;
     optional int32 player_id = 2;
