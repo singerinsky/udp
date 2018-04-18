@@ -9,62 +9,7 @@
 #include "message.pb.h"
 #include "system_util.h"
 #include "message_process.h"
-
-void process_udp_event(e_uint32 uMaxProcessNum)
-{
-    e_uint32 count = 0;
-    while(uMaxProcessNum >= count++){
-        stInEvent* pevent =  net_request_mgr::Instance()->pop_in_event();
-        if(pevent == NULL){
-            return; 
-        }
-        switch(pevent->nType)
-        {
-            case eConnect:
-                {
-                    ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
-                    printf("accept new connection from %d :%d!\n",peer->address.host,peer->address.port);
-                    //set time out
-                    enet_peer_timeout(peer,500,1000,1000);
-                    //net_request_mgr::Instance()->push_disconnect_outevent(pevent->stUn.connEvt.dwConnID);
-                    SoccerPlayerInfoRequest request;
-                    std::string name = request.GetTypeName();
-                    LOG(INFO)<<name;
-                }
-                break;
-            case eConnectFail:
-                break;
-            case eRecv:
-                {
-                    int ret = message_process::Instance()->parse_recv_message(pevent,
-                            pevent->stUn.recvEvt.pData,
-                            pevent->stUn.recvEvt.dwLen);
-                    if(pevent->stUn.recvEvt.pData != NULL){
-                        delete[] pevent->stUn.recvEvt.pData; 
-                    }
-                    break;
-                }
-            case eDisConnect:
-                break;
-            case eNone:
-                break;
-        }
-        delete pevent;
-    }
-    return;
-}
-
-void process_tcp_event(int process_num)
-{
-    LOG(INFO)<<"Process tcp event!!";
-}
-
-void process_event(e_uint32 uMaxProcessNum){
-    process_udp_event(uMaxProcessNum);
-
-    process_tcp_event(uMaxProcessNum);
-}
-
+#include "process_event.h"
 
 DEFINE_bool(daemon,false,"run in daemon");
 
@@ -89,6 +34,7 @@ int main(int argc, char** argv){
     timer_manager::Instance()->init(14);
     net_request_mgr::CreateInstance();
 
+    CCharacterMgr::CreateInstance();
     //new thread process receive udp message!
     udp_server::CreateInstance();
     udp_server* pServer = udp_server::Instance();//udp_server::Instance();
@@ -99,8 +45,9 @@ int main(int argc, char** argv){
     int t = time(NULL);
     while(bRun){
         timer_manager::Instance()->run_until_now();
-        process_event(200);
+        process_all_event(200);
         usleep(50); 
+        net_request_mgr::Instance()->dump_statis();
     }
     timer_manager::DestoryInstance();
     udp_server::DestoryInstance();

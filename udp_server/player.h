@@ -1,6 +1,8 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
+#include "serverpch.h"
+
 class CPlayer
 {
     public:
@@ -10,7 +12,7 @@ class CPlayer
         }
         ~CPlayer(){};
        
-        int GetPlayeId(){
+        int GetPlayerId(){
             return m_dwPlayerId; 
         }
 
@@ -22,9 +24,13 @@ class CPlayer
             return m_dwConnId; 
         }
 
+        void DisConnect();
+
     private:
         int m_dwPlayerId;
         int m_dwConnId;
+        ENetPeer*   _peer;
+
 };
 
 #endif

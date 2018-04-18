@@ -7,7 +7,7 @@
 #include "udpserver.h"
 #include "player.h"
 #include "character_mgr.h"
-
+#include "netrequestmgr.h"
 
 void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID)
 {
@@ -25,15 +25,18 @@ void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID)
         return;
     if(peer->data == NULL){
         CPlayer* pPlayer = new CPlayer(9999);
-        CCharacterMgr::Instance()->AddPlayer(pPlayer->GetPlayeId(),pPlayer);
+        CCharacterMgr::Instance()->AddPlayer(pPlayer->GetPlayerId(),pPlayer);
         peer->data = (void*)pPlayer;
     }else{
         CPlayer* pPlayer = (CPlayer*)(peer->data);
-        LOG(INFO)<<"Player has login, PlayerID:"<<pPlayer->GetPlayeId(); 
+        LOG(INFO)<<"Player has login, PlayerID:"<<pPlayer->GetPlayerId(); 
     }
     ClientLoginAck ack;
     ack.set_player_id(9999);
     ack.set_ret(1);
     SEND_MSG(dwConnID,ack,MSG_CLIENT_LOGIN_ACK);
+
+
+
 }
 

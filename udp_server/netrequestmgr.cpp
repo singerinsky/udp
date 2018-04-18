@@ -113,4 +113,8 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
 
 }
 
+void net_request_mgr::dump_statis()
+{
+    LOG(INFO)<<"totoal recv: "<<_statis.uRecvCount<<"totoal process: "<<_statis.uProcessCount;
+}
 

@@ -4,10 +4,10 @@
 #include "timer_manager.h"
 #include <map>
 #include "serverpch.h"
+#include "player.h"
 
 using namespace std;
 
-class CPlayer;
 class CCharacterMgr
 {
     DECLARE_SINGLETON(CCharacterMgr);    
@@ -34,6 +34,18 @@ class CCharacterMgr
             }
         }
 
+        void UnMapConnByPlayerId(e_uint32 dwPlayerId){
+            auto itr = _conn_map.begin();
+            while(itr != _conn_map.end()){
+                if(itr->second == dwPlayerId){
+                    _conn_map.erase(itr->first); 
+                    return;
+                }
+                itr++;
+            }
+        
+        }
+
         CPlayer* AddPlayer(e_uint32 dwPlayerId ,CPlayer* pPlayer){
             auto itr = _player_map.find(dwPlayerId); 
             if(itr != _player_map.end()){
@@ -49,6 +61,16 @@ class CCharacterMgr
                 return NULL; 
             }
             return itr->second;
+        }
+
+        void RemovePlayer(e_uint32 uPlayerId){
+            auto itr = _player_map.find(uPlayerId);
+            if(itr == _player_map.end()){
+                return; 
+            }
+            UnMapConnByPlayerId(itr->second->GetPlayerId());
+            delete itr->second;
+            _player_map.erase(itr);
         }
 
     private:

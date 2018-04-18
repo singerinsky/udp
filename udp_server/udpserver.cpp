@@ -69,8 +69,6 @@ bool udp_server::loop(){
                         net_request_mgr::Instance()->push_disconn_event(event->peer->connectID,
                                 event->peer->address.host,
                                 event->peer->address.port);
-                        LOG(INFO)<<"Client disconnectd!";
-	                    /* Reset the peer's client information. */
 	                    event->peer -> data = NULL;
 	                    break;
                     defalut:

@@ -26,6 +26,9 @@ public:
         ENetPeer* peer = enet_host_get_peer(m_pServer,uConnID);
         return peer;
     };
+    void stop(){
+        m_bRun = false;
+    }
 
 protected:
     ENetAddress _address;
