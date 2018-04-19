@@ -17,7 +17,7 @@ void process_udp_event(e_uint32 uMaxProcessNum)
         {
             case eConnect:
                 {
-                    ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
+                    ENetPeer* peer = udp_reactor::Instance()->get_peer(pevent->stUn.connEvt.dwConnID);
                     LOG(INFO)<<"New Connection ip:"<<peer->address.host<<" port:"<<peer->address.port;
                     enet_peer_timeout(peer,500,1000,1000);
                 }

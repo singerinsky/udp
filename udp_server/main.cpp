@@ -56,8 +56,8 @@ int main(int argc, char** argv){
 
     CCharacterMgr::CreateInstance();
     //new thread process receive udp message!
-    udp_server::CreateInstance();
-    udp_server* pServer = udp_server::Instance();//udp_server::Instance();
+    udp_reactor::CreateInstance();
+    udp_reactor* pServer = udp_reactor::Instance();//udp_reactor::Instance();
     pServer->init("0.0.0.0",1234,2000);
     pServer->create();
 
@@ -69,7 +69,7 @@ int main(int argc, char** argv){
         //net_request_mgr::Instance()->dump_statis();
     }
     timer_manager::DestoryInstance();
-    udp_server::DestoryInstance();
+    udp_reactor::DestoryInstance();
     net_request_mgr::DestoryInstance();
     CCharacterMgr::DestoryInstance();
 

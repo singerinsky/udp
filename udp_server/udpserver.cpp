@@ -9,17 +9,17 @@
 #include "netrequestmgr.h"
 #include "serverpch.h"
 
-INSTANCE_SINGLETON(udp_server);
+INSTANCE_SINGLETON(udp_reactor);
 
-udp_server::udp_server() {
+udp_reactor::udp_reactor() {
 	m_bRun = false;
 }
 
-udp_server::~udp_server() {
+udp_reactor::~udp_reactor() {
 	enet_host_destroy(m_pServer);
 }
 
-bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
+bool udp_reactor::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 {
     enet_address_set_host (&_address, str_ip.c_str());
 
@@ -38,7 +38,7 @@ bool udp_server::init(std::string str_ip,e_uint32 u_port,e_uint32 u_max_online)
 	return true;
 }
 
-bool udp_server::loop(){
+bool udp_reactor::loop(){
         ENetEvent *event = new ENetEvent();
 	    while(m_bRun){
             net_request_mgr::Instance()->process_out_event(300);
@@ -82,7 +82,7 @@ bool udp_server::loop(){
         return true;
 }
 
-void udp_server::run(){
+void udp_reactor::run(){
     m_bRun = true;
     loop();
 }

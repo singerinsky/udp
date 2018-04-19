@@ -14,11 +14,11 @@
 #include "queue.h"
 #include <enet/enet.h>
 
-class udp_server:public thread {
-    DECLARE_SINGLETON(udp_server);
+class udp_reactor:public thread {
+    DECLARE_SINGLETON(udp_reactor);
 public:
-	udp_server();
-	virtual ~udp_server();
+	udp_reactor();
+	virtual ~udp_reactor();
 	bool init(std::string ,e_uint32,e_uint32);
 	bool loop();
     void run();

@@ -20,7 +20,7 @@ void do_ClientHeartBeatRequest(ClientHeartBeatRequest& request,e_uint32 dwConnID
 void do_ClientLoginRequest(ClientLoginRequest& request,e_uint32 dwConnID)
 {
 
-    ENetPeer* peer = udp_server::Instance()->get_peer(dwConnID);
+    ENetPeer* peer = udp_reactor::Instance()->get_peer(dwConnID);
     if(peer == NULL)
         return;
     if(peer->data == NULL){

@@ -79,7 +79,7 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
         {
             case eOutDisconnect:
                 {
-                    ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.disOutEvt.dwConnID);
+                    ENetPeer* peer = udp_reactor::Instance()->get_peer(pevent->stUn.disOutEvt.dwConnID);
                     if(peer != NULL){
                         enet_peer_disconnect_now(peer,0); 
                         LOG(INFO)<<"disconnect peer!\n";
@@ -94,7 +94,7 @@ void net_request_mgr::process_out_event(e_uint32 process_num)
                             pevent->stUn.sendOutEvt.sendLen,
                             ENET_PACKET_FLAG_RELIABLE);
                     memcpy((char*)packet->data,pevent->stUn.sendOutEvt.pData,pevent->stUn.sendOutEvt.sendLen);
-                    ENetPeer* peer = udp_server::Instance()->get_peer(pevent->stUn.sendOutEvt.dwConnID);
+                    ENetPeer* peer = udp_reactor::Instance()->get_peer(pevent->stUn.sendOutEvt.dwConnID);
                     if(peer != NULL){
                         LOG(INFO)<<"send data back to client!\n";
                         enet_peer_send(peer,0,packet);
