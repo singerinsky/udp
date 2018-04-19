@@ -5,8 +5,21 @@
 #include <map>
 #include "serverpch.h"
 #include "player.h"
+#include "object_pool.h"
 
 using namespace std;
+
+class CPlayerPool:public object_pool<CPlayer>
+{
+    protected:
+        virtual CPlayer*  create(){
+            return NULL; 
+        }
+        virtual bool init_config(){}
+ 
+
+};
+
 
 class CCharacterMgr
 {
